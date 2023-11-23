@@ -1,0 +1,111 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+<!-- NAVBAR SECTION START............................. -->
+<%- include('common/header.ejs') %>
+    <!-- NAVBAR SECTION END...............................  -->
+
+
+    <!-- HERO SECTION START.................................  -->
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 text-white pt-5">
+                    <div class="text_box">
+                        <h1>Contact Us</h1>
+                        <p class="fs-5 pt-3" style="color: rgb(199, 191, 191);">Donec vitae odio quis nisl dapibus
+                            malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique
+                        </p>
+                        <p class="mt-4"><a href="/shop" class="btn btn-warning  rounded-5 fs-6 w-25  p-3 me-3">Shop
+                                Now</a><a href="/blog"
+                                class="btn btn-outline-light text-white rounded-5  p-3 w-25 fs-6">Explore</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <img class="img-fluid  pt-5" src="/assets/images/couch.png" alt="#">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END.................................  -->
+
+    <!-- FORM SECTION START................................ -->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-8 m-auto">
+                    <form method="post" action="/contact">
+
+                        <div class="row">
+
+                            <div class="col-md-4 d-flex">
+                                <div class="icon_box d-flex justify-content-center align-items-center rounded-4">
+                                    <i class="fa-solid fa-location-dot fa-xl" style="color: #ffffff;"></i>
+                                </div>
+                                <div>
+                                    <p class="ms-3 mt-2">43 Raymouth Rd.<br> Baltemoer, London 3910</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex">
+                                <div class="icon_box d-flex justify-content-center align-items-center rounded-4">
+                                    <i class="fa-regular fa-envelope fa-xl" style="color: #ffffff;"></i>
+                                </div>
+                                <div>
+                                    <p class="ms-3 mt-2">info@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 d-flex">
+                                <div class="icon_box d-flex justify-content-center align-items-center rounded-4">
+                                    <i class="fa-solid fa-phone fa-xl" style="color: #ffffff;"></i>
+                                </div>
+                                <div>
+                                    <p class="ms-3 mt-2">+1 294 3925 3939</p>
+                                </div>
+                            </div>
+
+                            <!-- FORM SECTION -->
+                            <div class="col-md-6 mt-5">
+                                <input class="w-100 p-3 rounded-4 border border-secondary" type="text" name="contact_name"
+                                    placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6 mt-5 m-auto">
+                                <input class="w-100 p-3 rounded-4 border border-secondary" type="text" name="contact_number"
+                                    placeholder="Your Number" required>
+                            </div>
+
+                            <div class="col-md-12">
+                                <input class="w-100 p-3 rounded-4 border border-secondary mt-3" type="email"
+                                    name="contact_email" placeholder="Your Email">
+                            </div>
+
+                            <div class="col-md-12">
+                                <textarea class="w-100 p-3 rounded-4 border border-secondary mt-3" name="contact_message"
+                                    rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-dark rounded-5 p-3 w-75 mt-4">Send Message</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        </div>
+    </section>
+    <!-- FORM SECTION START................................ -->
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION START.............................. -->
+    <%- include('common/footer.ejs') %>
+        <!-- FOOTER SECTION END................................. -->

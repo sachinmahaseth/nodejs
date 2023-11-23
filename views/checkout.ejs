@@ -1,0 +1,222 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+<!-- NAVBAR SECTION START............................. -->
+<%- include('common/header.ejs') %>
+    <!-- NAVBAR SECTION END...............................  -->
+
+
+    <!-- HERO SECTION START.................................  -->
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 text-white pt-5">
+                    <div class="text_box">
+                        <h1>Checkout</h1>
+                        <p class="fs-5 pt-3" style="color: rgb(199, 191, 191);">Donec vitae odio quis nisl dapibus
+                            malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique
+                        </p>
+                        <p class="mt-4"><a href="/shop" class="btn btn-warning  rounded-5 fs-6 w-25  p-3 me-3">Shop
+                                Now</a><a href="/blog"
+                                class="btn btn-outline-light text-white rounded-5  p-3 w-25 fs-6">Explore</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <img class="img-fluid  pt-5" src="/assets/images/couch.png" alt="#">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END.................................  -->
+
+    <div class="container border mt-5 p-3 ">
+        <p class="text-secondary-emphasis">Returning customer? <a class="text-dark" href="/login">Click here</a> to
+            login
+        </p>
+    </div>
+
+    <!-- CHECKOUT SECTION START........................... -->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <h2>Billing Details</h2>
+                    <div class="row">
+                        <div class="col-md-10 bg-white p-5">
+                            <div class="row">
+                                <div class="col-md-12 mt-4">
+                                    <select class="form-control w-100 p-3 rounded-4">
+                                        <option value="1">Select a country</option>
+                                        <option value="2">India</option>
+                                        <option value="3">Algeria</option>
+                                        <option value="4">Afghanistan</option>
+                                        <option value="5">Ghana</option>
+                                        <option value="6">Albania</option>
+                                        <option value="7">Bahrain</option>
+                                        <option value="8">Colombia</option>
+                                        <option value="9">Dominican Republic</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="fname" placeholder="First Name">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="lname" placeholder="Last Name">
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="company" placeholder="Company Name">
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="address" placeholder="Street address">
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="add" placeholder="Apartment, suite, unit etc. (optional)
+                                    ">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                        name="state" placeholder="State / Country">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="number"
+                                        name="zip" placeholder="Posta / Zip">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="email"
+                                        name="fname" placeholder="Email Address">
+                                </div>
+                                <div class="col-md-6 mt-3">
+                                    <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="number"
+                                        name="email" placeholder="Phone Number">
+                                </div>
+                                <div class="col-md-12 mt-3">
+                                    <textarea class="w-100 p-3 rounded-4 border border-secondary-emphasis" name="about"
+                                        rows="5" placeholder="Write your notes here...
+                                    "></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <h2>Coupon Code</h2>
+                    <div class="row">
+                        <div class="col-md-10 bg-white p-5">
+                            <p class=" ms-4">Enter your coupon code if you have one</p>
+                            <input class="w-50 p-3 rounded-4 border border-secondary-emphasis ms-4" type="text"
+                                name="couponn" placeholder="Coupon Code">
+                            <button class="btn btn-dark w-25 p-3 rounded-5 ms-3">Apply</button>
+                        </div>
+                    </div>
+
+                    <h2 class="mt-5">Your Order</h2>
+                    <div class="col-md-12 ">
+                        <div class="row">
+                            <div class="col-md-10 bg-white p-5">
+                                <table class="payment_form table">
+                                    <thead class="border-bottom border-secondary-emphasis">
+                                        <tr>
+                                            <td>
+                                                <h4>product</h4>
+                                            </td>
+                                            <td class="text-center">
+                                                <h4>Total</h4>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="border-bottom border-secondary-emphasis">
+                                            <td>Top Up T-Shirt <strong>x</strong> 1</td>
+                                            <td class="text-center">$250.00</td>
+                                        </tr>
+                                        <tr class="border-bottom border-secondary-emphasis">
+                                            <td>Polo Shirt <strong>x</strong> 1</td>
+                                            <td class="text-center">$100.00</td>
+                                        </tr>
+                                        <tr class="border-bottom border-secondary-emphasis">
+                                            <td>
+                                                <h6 class="text-secondary-emphasis">Cart Subtotal</h6>
+                                            </td>
+                                            <td class="text-center">$350.00</td>
+                                        </tr>
+                                        <tr class="border-bottom border-secondary-emphasis">
+                                            <td>
+                                                <h6>Order Total</h6>
+                                            </td>
+                                            <td class="text-center">$350.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="col-md-12 mt-5">
+                                    <button class="accordion border" style="text-decoration: underline;">Direct Bank
+                                        Transfer</button>
+                                    <div class="panel">
+                                        <p>Make your payment directly into our bank account. Please use your Order ID as
+                                            the payment reference. Your order won’t be shipped until the funds have
+                                            cleared in our account.</p>
+                                    </div>
+
+                                    <button class="accordion border" style="text-decoration: underline;">Cheque
+                                        Payment</button>
+                                    <div class="panel">
+                                        <p>Make your payment directly into our bank account. Please use your Order ID as
+                                            the payment reference. Your order won’t be shipped until the funds have
+                                            cleared in our account.</p>
+                                    </div>
+
+                                    <button class="accordion border" style="text-decoration: underline;">Paypal</button>
+                                    <div class="panel">
+                                        <p>Make your payment directly into our bank account. Please use your Order ID as
+                                            the payment reference. Your order won’t be shipped until the funds have
+                                            cleared in our account.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <a href="/done"> <button class="btn btn-dark w-100 p-3 rounded-5 mt-5">Place
+                                            Order</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CHECKOUT SECTION START........................... -->
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION START.............................. -->
+    <%- include('common/footer.ejs') %>
+        <!-- FOOTER SECTION END................................. -->
+
+
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+        </script>

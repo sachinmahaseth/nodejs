@@ -1,0 +1,87 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+<!-- NAVBAR SECTION START............................. -->
+<%- include('common/header.ejs') %>
+    <!-- NAVBAR SECTION END...............................  -->
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img class="img-fluid w-75 d-block m-auto" src="/upload/<%= addData.productimage %>">
+                <div class="row mt-2">
+                    <div class="col-md-6 ">
+                        <button class="btn btn-warning w-75  fs-6 float-end  p-3"> <img class="me-2" src="/assets/images/cart.svg"
+                                alt="image"><strong class="text-white"> GO TO CART </strong></button>
+                    </div>
+
+                    <div class="col-md-6 ">
+
+                        <button class="btn btn-primary w-75 fs-6   p-3"> <i class="fa-solid fa-bolt-lightning fa-lg"
+                                style="color: #ffffff;"></i> <strong> BUY NOW </strong> </button>
+                    </div>
+                </div>
+                
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12 ">
+
+                        <p class="fs-6 text-dark">
+                        <h5><strong>
+                                <%= addData.productdetail %>
+                            </strong> </h5>
+                        </p>
+
+                    </div>
+                    <!-- REVIEW SECTION -->
+                    <div class="col-md-12">
+                        <a href="#" class="text-secondary-emphasis"> <i class="fa-solid fa-star fa-sm"
+                                style="color: #0b6100;"></i> Ratings & 11 Reviews</a>
+                    </div>
+
+
+                    <div class="col-md-12 mt-3">
+                        <P class="text-success"><strong>Extra ₹2000 off </strong></P>
+                        <h3 class="d-inline"> <strong class="m-auto">
+                                <i class="fa-solid fa-indian-rupee-sign fa-sm" style="color: #000000;"></i>
+                                <%= addData.productprice %>
+                            </strong>
+                        </h3><span class="text-secondary-emphasis ms-2"
+                            style="text-decoration: line-through;">₹35,999</span> <strong class="text-success ms-1"> 55%
+                            off</strong>
+                    </div>
+
+                    <!-- offerrs section -->
+                    <div class="col-md-12 mt-3">
+                        <strong class="fs-5 d-block">Available offers</strong>
+
+                        <p><i class="fa-solid fa-tag fa-sm mt-4" style="color: #00996b;"></i> <span
+                                class="d-inline text-dark">Special Price</span><span
+                                class="text-secondary-emphasis ms-2">Get extra ₹2000 off (price inclusive of
+                                cashback/coupon)</span></p>
+
+                        <p><i class="fa-solid fa-tag fa-sm mt-2" style="color: #00996b;"></i> <span
+                                class="d-inline text-dark">Bank Offer</span><span
+                                class="text-secondary-emphasis ms-2">10% off on Bank of Baroda Credit Card Txns, up to
+                                ₹1,500 on orders of ₹5,000 and above</span></p>
+
+                        <p><i class="fa-solid fa-tag fa-sm mt-2" style="color: #00996b;"></i> <span
+                                class="d-inline text-dark">Bank Offer</span><span
+                                class="text-secondary-emphasis ms-2">10% off on Bank of Baroda Credit Card EMI Txns, up
+                                to ₹2,000 on orders of ₹5,000 and above</span></p>
+
+                        <p><i class="fa-solid fa-tag fa-sm mt-2" style="color: #00996b;"></i> <span
+                                class="d-inline text-dark">Bank Offer</span><span
+                                class="text-secondary-emphasis ms-2">10% off on ICICI Bank Debit Card Txns, up to ₹1250,
+                                on orders of ₹5,000 and above</span></p>
+                    </div>
+                </div>
+            </div>
+               
+        </div>
+    </div>
+
+
+    

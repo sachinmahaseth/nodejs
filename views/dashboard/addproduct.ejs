@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="/assets/css/dashboard.css" type="text/css">
+
+<!-- HEADER SECTION -->
+<%- include('header.ejs') %>
+    <!-- HEADER SECTION -->
+
+
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <%- include('left.ejs') %>
+            </div>
+
+            <div class="col-md-9">
+
+
+
+                <!-- <h3     class="text-center mt-4">Product Details</h3   > -->
+                <form method="post" action="/addproduct" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="productName">Product Name</label>
+                        <input type="text" name="productname" class="form-control" id="productName"
+                            placeholder="Enter product name">
+                    </div>
+                    <div class="form-group">
+                        <label for="productDescription">Product Description</label>
+                        <textarea class="form-control" name="productdetail" id="productDescription" rows="4"
+                            placeholder="Enter product description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="productprice">Price</label>
+                        <input type="text" name="productprice" class="form-control" id="productPrice"
+                            placeholder="Enter product price">
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="productimage">Product Image</label>
+                        <input type="file" class="form-control-file" name="productimage" id="productImage">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- END -->

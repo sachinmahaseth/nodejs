@@ -1,0 +1,226 @@
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+
+<!-- NAVBAR SECTION START............................. -->
+<%- include('common/header.ejs') %>
+    <!-- NAVBAR SECTION END...............................  -->
+
+
+    <!-- HERO SECTION START.................................  -->
+    <section id="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 text-white pt-5">
+                    <div class="text_box">
+                        <h1>Cart</h1>
+                        <p class="fs-5 pt-3" style="color: rgb(199, 191, 191);">Donec vitae odio quis nisl dapibus
+                            malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique
+                        </p>
+                        <p class="mt-4"><a href="/shop" class="btn btn-warning  rounded-5 fs-6 w-25  p-3 me-3">Shop
+                                Now</a><a href="/blog"
+                                class="btn btn-outline-light text-white rounded-5  p-3 w-25 fs-6">Explore</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <img class="img-fluid  " src="/assets/images/couch.png" alt="#">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HERO SECTION END.................................  -->
+
+
+    <!-- CART SECTION START................................... -->
+    <section>
+        <div class="container">
+            <div class="row">
+                
+                <% if(addData.length>0){ %>
+                        <%for(var i=0; i<addData.length;i++) {%>
+                            <div class="col-md-3">
+                                <img class="img-fluid product-thumbnail w-100 h-75" src="http://localhost:3000/upload/<%= addData[i].productimage %>">
+                                <h6 class="text-center"><%= addData[i].productname %></h6>
+                                <strong class="m-auto d-block text-center"> $ <%= addData[i].productprice %> </strong>   
+                                <a class="text-center d-block"  href="/packagedetail/<%=addData[i]._id %>"><button class="btn btn-primary w-50 fs-6   p-2 mt-3"> <i class="fa-solid fa-bolt-lightning fa-lg"
+                                    style="color: #ffffff;"></i> <strong> BUY NOW </strong> </button></a>
+
+                            </div>
+                            <% } %>
+                            <% } else {%>
+                                result not found
+                                <% } %>
+                    <!-- <table class="table">
+                        <thead>
+                            <tr class="product_detail text-center">
+
+                                <td>
+                                    <h3>Image</h3>
+                                </td>
+                                <td>
+                                    <h3>Products</h3>
+                                </td>
+                                <td>
+                                    <h3>Price</h3>
+                                </td>
+                                <td>
+                                    <h3>Quantity</h3>
+                                </td>
+                                <td>
+                                    <h3>Total</h3>
+                                </td>
+                                <td>
+                                    <h3>Remove</h3>
+                                </td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="border-top border-secondary-emphasis">
+                                <td>
+                                    <img class="img-fluid mt-5 w-75" src="/assets/images/chair-1.png" alt="image">
+                                </td>
+                                <td>
+                                    <h4 class="text-center">Product 1</h4>
+                                </td>
+                                <td>
+                                    <p class="text-center text-secondary-emphasis">$49.00</p>
+                                </td>
+
+                                <td>
+                                    <div class="input-group mb-3 d-flex align-items-center ">
+                                        <div class="">
+                                            <button class="btn btn-outline-black" type="button">&minus;</button>
+                                        </div>
+                                        <input type="text" class="form-control text-center " value="1" placeholder="">
+                                        <div>
+                                            <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p class="text-center text-secondary-emphasis">$49.00</p>
+                                </td>
+
+
+                                <td class="text-center"><a href="#" class="btn btn-black btn-sm ">X</a></td>
+
+
+                            </tr>
+
+
+
+
+                            
+
+                            <tr class="border-top border-secondary-emphasis">
+                                <td>
+                                    <img class="img-fluid mt-5 w-75" src="/assets/images/chair-2.png" alt="image">
+                                </td>
+                                <td>
+                                    <h4 class="text-center">Product 2</h4>
+                                </td>
+                                <td>
+                                    <p class="text-center text-secondary-emphasis">$49.00</p>
+                                </td>
+
+                                <td>
+                                    <div class="input-group mb-3 d-flex align-items-center ">
+                                        <div class="">
+                                            <button class="btn btn-outline-black" type="button">&minus;</button>
+                                        </div>
+                                        <input type="text" class="form-control text-center " value="1" placeholder="">
+                                        <div>
+                                            <button class="btn btn-outline-black increase" type="button">&plus;</button>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <p class="text-center text-secondary-emphasis">$49.00</p>
+                                </td>
+
+
+                                <td class="text-center"><a href="#" class="btn btn-black btn-sm ">X</a></td>
+
+
+                            </tr>
+
+                        </tbody>
+                    </table> -->
+        
+            </div>
+        </div>
+    </section>
+    <!-- CART SECTION END................................... -->
+
+    <!-- DETAILS SECTION START............................... -->
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <button class="btn btn-dark w-75 p-2  rounded-5">Update cart</button>
+                        </div>
+                        <div class="col-md-7">
+                            <a href="/shop"><button class="btn btn-dark w-75 p-2  rounded-5">Continue
+                                    Shopping</button></a>
+                        </div>
+
+                        <div class="col-md-12 mt-5">
+                            <h4>Coupon</h4>
+                            <p class="text-secondary-emphasis">Enter your coupon code if you have one.</p>
+                        </div>
+                        <div class="col-md-8">
+                            <input class="w-100 p-3 rounded-4 border border-secondary-emphasis" type="text"
+                                name="coupon" placeholder="Coupon Code">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-dark w-100  rounded-5 fs-4">Apply coupon</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-8 m-auto ">
+                            <h4 class="text-center border-bottom border-secondary-emphasis">CART TOTALS</h4>
+                            <div class="row mt-5">
+                                <div class="col-md-6">
+                                    <p class="float-end">Subtotal</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-center">$230.00</h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <p class="float-end">Total</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 class="text-center">$230.00</h6>
+                                </div>
+
+                                <div class="col-md-12">
+                                    <a href="/checkout"><button
+                                            class="btn btn-dark w-75 p-4 rounded-5 fs-5 m-auto mt-3 float-end">Proceed
+                                            To Checkout</button></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- DETAILS SECTION START............................... -->
+
+
+
+
+
+
+
+    <!-- FOOTER SECTION START.............................. -->
+    <%- include('common/footer.ejs') %>
+        <!-- FOOTER SECTION END................................. -->

@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="/assets/css/dashboard.css" type="text/css">
+
+<!-- HEADER SECTION -->
+<%- include('header.ejs') %>
+    <!-- HEADER SECTION -->
+
+
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <%- include('left.ejs') %>
+            </div>
+            <div class="col-md-9 add_product">
+                <% if(contactData.length>0){ %>
+                <table class="table table-bordered table-sm " id="myTable">
+
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Ph.Number</th>
+                            <th>Email</th>
+                            <th>Message</th>
+                            <th>Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <%for(var i=0; i<contactData.length; i++){%>
+                            <tr>
+                                <td>
+                                    <%= contactData[i].contact_name %>
+                                </td>
+                                <td>
+                                    <%= contactData[i].contact_number %>
+                                </td>
+                                <td>
+                                    <%= contactData[i].contact_email %>
+                                </td>
+                                <td>
+                                    <%= contactData[i].contact_message %>
+                                </td>
+
+                                <td>
+                                    <!-- <a class="text-dark" href="/edit/<%= contactData[i].id %>">edit</a> -->
+                                    &nbsp; &nbsp;
+                                    <a class="text-dark" href="/deletecon/<%= contactData[i].id %>">delete
+                                    </a>
+                                </td>
+
+
+                            </tr>
+                            <% } %>
+
+                    </tbody>
+                </table>
+                <% } else { %>
+                    No record found
+
+                      <%} %>
+            </div>
+        </div>
+    </div>
+    <!-- END -->

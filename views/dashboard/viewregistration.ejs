@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/assets/css/dashboard.css" type="text/css">
+
+<!-- HEADER SECTION -->
+<%- include('header.ejs') %>
+    <!-- HEADER SECTION -->
+
+
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <%- include('left.ejs') %>
+            </div>
+            <div class="col-md-9 add_product">
+                <% if(regData.length>0){ %>
+                    <table class="table table-bordered table-sm ">
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Email</th>
+                                <th>Create password</th>
+                                <th>Confirm Password</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for(var i=0; i<regData.length; i++){%>
+                                <tr>
+                                    <td>
+                                        <%= regData[i].fname %>
+                                    </td>
+                                    <td>
+                                        <%= regData[i].lname %>
+                                    </td>
+                                    <td>
+                                        <%= regData[i].emailid %>
+                                    </td>
+                                    <td>
+                                        <%= regData[i].createpass %>
+                                    </td>
+                                    <td>
+                                        <%= regData[i].confirmpass %>
+                                    </td>
+                                    <td><a class="text-dark" href="/edit/<%= regData[i]._id %>">edit &nbsp; &nbsp;
+                                        <a class="text-dark" href="/delete/<%= regData[i]._id %>">delete
+                                    </a></td>
+                                    
+
+                                </tr>
+                                <% } %>
+
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        No record found
+
+                          <%} %>
+
+            </div>
+        </div>
+    </div>
+    <!-- END -->

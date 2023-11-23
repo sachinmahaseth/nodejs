@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/assets/css/dashboard.css" type="text/css">
+<style>
+    img{
+      height: 40px;
+    }
+  </style>
+  
+
+<!-- HEADER SECTION -->
+<%- include('header.ejs') %>
+    <!-- HEADER SECTION -->
+
+
+
+
+    <!-- LEFT SECTION -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3">
+                <%- include('left.ejs') %> 
+            </div>
+            <div class="col-md-9 ">
+                <% if(addData.length>0){ %>
+                    <table class="table table-bordered table-sm ">
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Details</th>
+                                <th>Price</th>
+                                <th>Product image</th>
+                                <th>Update</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%for(var i=0; i<addData.length; i++){%>
+                                <tr>
+                                    <td>
+                                        <%= addData[i].productname %>
+                                    </td>
+                                    <td>
+                                        <%= addData[i].productdetail %>
+                                    </td>
+                                    <td>
+                                        <%= addData[i].productprice %>
+                                    </td>
+
+                                    <td><img src="http://localhost:3000/upload/<%= addData[i].productimage%>" </td>
+
+                                    <td>
+
+                                        <a class="text-dark" href="/delete2/<%= addData[i]._id %>">delete
+                                        </a>
+                                    </td>
+
+
+                                </tr>
+                                <% } %>
+
+                        </tbody>
+                    </table>
+                    <% } else { %>
+                        No record found
+
+                          <%} %>
+
+            </div>
+        </div>
+    </div>
+    <!-- END -->
