@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="adminAssets/assets/" data-template="vertical-menu-template-free">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>
+    Dashboard &#8211; Pathik Your Own Trip
+  </title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="adminAssets/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="adminAssets/assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+  <link rel="stylesheet" href="adminAssets/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+  <!-- Page CSS -->
+
+  <!-- Helpers -->
+  <script src="adminAssets/assets/vendor/js/helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="adminAssets/assets/js/config.js"></script>
+
+  <!-- ✅ Load CSS file for DataTables  -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css" integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <!-- ✅ load jQuery ✅ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- ✅ load DataTables ✅ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="adminAssets\assets\css\adminCss.css" />
+
+  <script>
+    function deleteCookies() {
+      var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+    }
+  </script>
+  <script>
+    window.addEventListener("pageshow", function(event) {
+      var historyTraversal = event.persisted ||
+        (typeof window.performance != "undefined" &&
+          window.performance.navigation.type === 2);
+      if (historyTraversal) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="text-center py-3">
+          <a href="/dashboard">
+            <img src="publicAssets/img/path-logo.png" class="img-fluid" style="height: 65px" alt="" />
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+          <li class="menu-item">
+            <a href="/dashboard" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <div data-i18n="Analytics">Dashboard</div>
+            </a>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Response Info</span>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div data-i18n="Account Settings">Form Response</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/popupResponse" class="menu-link">
+                  <div data-i18n="Account">Popup Form</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/contactResponse" class="menu-link">
+                  <div data-i18n="Notifications">Contact Us Form</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Packages Info</span>
+          </li>
+          <!-- Layouts -->
+          <li class="menu-item">
+            <a href="/addPackage" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-table"></i>
+              <div data-i18n="Tables">Add Package</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div data-i18n="Layouts">View Packages</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/authCat/Domestic" class="menu-link">
+                  <div data-i18n="Without menu">Domestic</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/authCat/International" class="menu-link">
+                  <div data-i18n="Without navbar">International</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Manage Website</span>
+          </li>
+          <li class="menu-item">
+            <a href="/siteSetting" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+              <div data-i18n="Tables">Site Setting</div>
+            </a>
+          </li>
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Admin Setting</span>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+              <div data-i18n="Authentications">Authentications</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <span class="menu-link" style="cursor: pointer">
+                  <div data-i18n="Basic" data-bs-toggle="modal" data-bs-target="#modalCenter">
+                    Change Password
+                  </div>
+                </span>
+              </li>
+              <li class="menu-item">
+                <div class="text-center">
+                  <span class="badge bg-label-danger m-auto py-2 px-5" style="text-transform: capitalize !important;cursor: pointer;">
+                    <form action="/logout" method="post">
+                      <button style="all: unset" id="logoutBtn" onclick="deleteCookies()">Log Out</button>
+                    </form>
+                  </span>
+                </div>
+
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row align-items-center">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Total Packages</span>
+                        <h3 class="card-title mb-2"><%=totalPackages%></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded" />
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Total Booking</span>
+                        <h3 class="card-title mb-2"><%= totalBooking %></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/paypal.png" alt="Credit Card" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
+                              <a class="dropdown-item" href="/contactResponse">View</a>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="d-block mb-1">Contact Response</span>
+                        <h3 class="card-title text-nowrap mb-2"><%=totalContactRes%></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                              <a class="dropdown-item" href="/popupResponse">View More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Popup Response</span>
+                        <h3 class="card-title mb-2"><%=totalPopupRes%></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- table -->
+
+            <!-- Basic Bootstrap Table -->
+            <div class="card">
+              <h5 class="card-header" style="text-transform: capitalize !important">
+                <%= categoryName %> Packages
+              </h5>
+              <div class="px-5 py-4 text-nowrap">
+                <div class="row">
+                  <% if(packageData.length != 0 ){ %> <%
+                    packageData.forEach((value,index)=>{ %>
+
+                  <div class="col-md-3 p-3 singleCategoryPack">
+                    <div class="bg-white lightShadow border rounded-4 overflow-hidden">
+                      <div class="" style="position: relative;">
+                        <img src="packages/<%=value.packageImg%>" class="img-fluid" alt="">
+
+                        <div class="bg-white p-2 rounded-3" style="position: absolute; right: 10px; top: 10px;">
+                          <small class="">
+                            ₹
+                            <%=value.packagePrice%>/-
+                          </small>
+                        </div>
+
+                        <div style="position: absolute; bottom: 0px; left: 0; right: 0; background-color: white;" class="border-bottom">
+                          <div class="d-flex align-content-center justify-content-center p-3">
+                            <span class="badge bg-label-primary me-2" style="
+                                text-transform: capitalize !important;
+                                cursor: pointer;
+                              ">
+                              <a href="/edit/<%=value._id%>"> Edit Package </a>
+                            </span>
+                            <span class="badge bg-label-danger me-2" style="
+                                text-transform: capitalize !important;
+                                cursor: pointer;
+                              ">
+                              <form action="/deletePackage" method="post">
+                                <input type="hidden" name="_id" value="<%=value._id%>" id="" />
+                                <button style="all: unset">Delete</button>
+                              </form>
+                            </span>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="p-1">
+                        <div class="">
+                          <div class="p-1 mb-3 border-bottom">
+                            <div class="d-flex justify-content-center">
+                              <div class="text-wrap">
+                                <small>
+                                  <i class="fa-solid fa-clock-rotate-left greenTxt"></i>
+                                  &nbsp;
+                                  <small>
+                                    <%=value.packageDuration%>
+                                  </small>
+                                </small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="px-1 text-wrap text-center">
+                          <p>
+                            <small>
+                              <%=value.packageTitle%>
+                            </small>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <% }) %> <% } else { %>
+                  <div class="col-12 text-center pb-5">
+                    No Package Found
+                    <div>
+                      <a href="/dashboard">
+                        <small> Back to Home </small>
+                      </a>
+                    </div>
+                  </div>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+            <!--/ Basic Bootstrap Table -->
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="text-center">
+          <h5 class="modal-title" id="modalCenterTitle">Change Password</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="currentPassword" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="currentPassword">&nbsp; Current Password</label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="newPassword" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="newPassword">&nbsp; New Password</label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="newPassword2" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="newPassword2">&nbsp; Re-enter Password</label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <button type="button" id="changePassBtn" class="btn btn-danger btn-buy-now">
+            Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="adminAssets/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="adminAssets/assets/vendor/libs/popper/popper.js"></script>
+  <script src="adminAssets/assets/vendor/js/bootstrap.js"></script>
+  <script src="adminAssets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="adminAssets/assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="adminAssets/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="adminAssets/assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="adminAssets/assets/js/dashboards-analytics.js"></script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+  <!-- Admin JS -->
+  <script src="adminAssets/assets/js/adminScript.js"></script>
+</body>
+
+</html>

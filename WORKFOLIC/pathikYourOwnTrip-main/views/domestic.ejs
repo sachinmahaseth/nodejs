@@ -1,0 +1,531 @@
+<%- include('./partials/navbar') %>
+
+
+<section id="smallMainHero">
+  <nav class="d-none d-md-block p-2" id="largerNav">
+    <div class="row align-items-center">
+      <div class="col-3">
+        <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 100px;">
+      </div>
+      <div class="col-6 text-center">
+        <a href="/" class="px-1 mx-2">
+          <small>
+            Home
+          </small>
+        </a>
+        <a href="/international" class="px-1 mx-2">
+          <small>
+            International
+          </small>
+        </a>
+        <a href="/domestic" class="activeBtn px-1 mx-2">
+          <small>
+            Domestic
+          </small>
+        </a>
+        <a href="/blogs" class="px-1 mx-2">
+          <small>
+            Blogs
+          </small>
+        </a>
+        <a href="/about" class="px-1 mx-2">
+          <small>
+            About
+          </small>
+        </a>
+      </div>
+      <div class="col-3 text-end">
+        <a href="/contact">
+          <button class="cssbuttons-io-button">
+            <span>Contact Us</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="d-block d-md-none" id="smallNav">
+
+    <div class="container-fluid p-3">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+        </div>
+        <div class="col-6 text-end">
+          <h4 style="cursor:pointer" class="cfont text-white mb-0" onclick="openNav()">
+            MENU
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+
+      <!-- <span >
+        <i class="fa-solid fa-xmark"></i>
+      </span> -->
+
+      <div class="h-25 p-4 d-flex align-items-center justify-content-center" style="position: relative;">
+
+        <div class="text-center">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+          <h5 class="cfont">
+            Pathik Your Own Trip
+          </h5>
+        </div>
+
+
+        <div style="position: absolute; top: 20px; right: 30px;" onclick="closeNav()">
+          <i class="fa-solid fa-xmark fs-3"></i>
+        </div>
+
+      </div>
+      <div class="h-50 p-4">
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/">
+            Home
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/international">
+            International
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/domestic">
+            <b>
+              Domestic
+            </b>
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/blogs">
+            Blogs
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/about">
+            About
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/contact">
+            Contact Us
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+      </div>
+      <div class="h-25 p-4 d-flex align-items-end justify-content-center">
+        <section>
+          <div class="pb-3">
+            <i class="fa-solid fa-phone pe-1"></i>
+            <a href="" class="p-0">
+              +92 54343 84374
+            </a>
+          </div>
+          <div class="pb-3">
+            <i class="fa-regular fa-envelope pe-1"></i>
+            <a href="" class="p-0">
+              info@pathikyourowntrip.com
+            </a>
+          </div>
+          <div class="pb-3">
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+
+
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-end pb-5">
+      <div class="col-12 text-center text-md-start">
+        <h1 class="cfont text-white">
+          Top Domestic Packages
+        </h1>
+        <h6 class="text-white">
+          By Pathik Your Own Trip
+        </h6>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="my-5">
+  <div class="container-fluid px-5">
+    <div class="row">
+      <div class="col-12 mb-5 text-center">
+        <h4 class="cfont1 mb-0 greenTxt">
+          Find Out
+        </h4>
+        <h2 class="cfont">
+          Our Top Destinations
+        </h2>
+        <p>
+          <small>
+            A collection revered by over 500,000 domestic travelers. Unveil the top-rated <br> adventures chosen by discerning explorers like you.
+          </small>
+        </p>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
+
+          <% allDomesticData.forEach((value,index)=>{ %>
+          <div class="col-md-2 col-6 mb-4">
+            <a href="/category/<%=value._id%>">
+              <div class="mainCateDiv">
+                <img src="publicAssets/img/squareCategory/<%=value._id%>.png" class="img-fluid" alt="">
+                <section>
+                  <div>
+                    <h6 class="text-white fw-bold">
+                      <%=value._id%>
+                    </h6>
+                    <div class="text-white">
+                      <small> <%=value.count%> +</small>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </a>
+          </div>
+          <% }) %>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- packages -->
+<% allDomesticData.forEach((value,index)=>{ %>
+
+<!-- packages carousel -->
+<section class="py-md-5 pb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-11 m-auto mb-4 align-items-center">
+        <section class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="cfont1 mb-0 greenTxt">
+              Check out our
+            </h4>
+            <h2 class="cfont">
+              <%=value._id%> Trip
+            </h2>
+          </div>
+          <div class="pe-5">
+            <a href="/category/<%=value._id%>" class="text-decoration-none text-dark">
+              See All
+              <span style="transform: rotate('45deg');">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="col-11 m-auto p-md-5 p-3" style="border-radius: 10px; background: #f7f8fa;">
+
+        <section class="swiper swiperCarousel1">
+          <div class="swiper-wrapper">
+            <% value.packages.forEach((value,index)=>{ %>
+            <div class="swiper-slide p-2">
+              <div class="bg-white rounded-4 overflow-hidden">
+                <a href="/category/<%=value.packageLocation%>/<%=value.packageURL%>" class="link-body-emphasis text-decoration-none">
+                  <div class="" style="position: relative;">
+                    <img src="packages/<%=value.packageImg%>" class="img-fluid" alt="">
+                    <div class="bg-white p-2 rounded-3" style="position: absolute; right: 10px; top: 10px;">
+                      <small class="">
+                        ₹
+                        <%=value.packagePrice%>/-
+                      </small>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div class="">
+                      <div class="p-2 mb-3 border-bottom">
+                        <div class="">
+                          <div>
+                            <small>
+                              <i class="fa-solid fa-location-arrow greenTxt"></i>
+                            </small> &nbsp;
+                            <small>
+                              <%=value.packageLocation%> Trips
+                            </small>
+                          </div>
+                          <div>
+                            <small>
+                              <i class="fa-solid fa-clock-rotate-left greenTxt"></i>
+                              &nbsp;
+                              <small>
+                                <%=value.packageDuration%>
+                              </small>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1">
+                      <p>
+                        <small>
+                          <%=value.packageTitle%>
+                        </small>
+                      </p>
+                    </div>
+
+
+                  </div>
+                </a>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<% if(index == 0 || index == 6){ %>
+<!-- popular tours -->
+<section class="my-5" style="background: url(https://ld-wp73.template-help.com/wordpress/prod_19731/v4/wp-content/uploads/2018/07/bg-home-5-1.png); background-size: cover; background-position: center center; ">
+  <div style="background: rgba(255, 255, 255, 0.7);">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 col-6 order-0 order-md-0 mb-3 mb-md-0">
+          <a href="/category/Kashmir">
+            <div class="popularCard">
+              <img src="publicAssets/img/banners/Kashmir.png" class="img-fluid rounded-4" alt="">
+              <div class="rounded-4">
+                <h3 class="cfont text-white">
+                  Kashmir Tours
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-md-4 py-md-1 order-2 order-md-1">
+          <div class="row">
+            <div class="col-6 col-md-12 my-3">
+              <a href="/category/Meghalaya">
+                <div class="popularCard">
+                  <img src="publicAssets/img/banners/Megahalya.png" class="img-fluid rounded-4" alt="">
+                  <div class="rounded-4">
+                    <h3 class="cfont text-white">
+                      Meghalaya Tours
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-6 col-md-12 my-3">
+              <a href="/category/Udaipur">
+                <div class="popularCard">
+                  <img src="publicAssets/img/banners/Udaipur.png" class="img-fluid rounded-4" alt="">
+                  <div class="rounded-4">
+                    <h3 class="cfont text-white">
+                      Udaipur Tours
+                    </h3>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-6 order-1 order-md-2 mb-3 mb-md-0">
+          <a href="/category/Manali">
+            <div class="popularCard">
+              <img src="publicAssets/img/banners/Manali.png" class="img-fluid rounded-4" alt="">
+              <div class="rounded-4">
+                <h3 class="cfont text-white">
+                  Manali Tours
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+
+<% if(index == 2){ %>
+<!-- mid banner carousel -->
+<section class="my-5">
+  <div class="container-fluid px-md-5">
+    <div class="row px-md-4">
+      <div class="col-12 text-center mb-4">
+        <h4 class="cfont1 mb-0 greenTxt">
+          Give Eyes To
+        </h4>
+        <h2 class="cfont">
+          Our Premier Tour Packages
+        </h2>
+      </div>
+      <div class="col-12 overflow-hidden">
+        <!-- Slider main container -->
+        <div class="swiper swiperCarousel4">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper pb-5">
+
+            <% slidersData.forEach((value)=>{  %>
+
+            <div class="swiper-slide">
+              <a href="/category/<%=value.packageLocation%>" class="link-body-emphasis text-decoration-none">
+                <img src="banners/<%=value.sliderImg%>" alt="" class="img-fluid rounded-4">
+              </a>
+            </div>
+
+            <% }) %>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<% } %>
+
+
+<% if(index == 4){ %>
+<!-- International and domestic -->
+<section class="mb-5">
+  <div class="container-fluid px-md-5">
+    <div class="row px-md-5">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <div class="" style="position: relative;">
+          <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/h31.jpg" class="img-fluid" alt="">
+          <div class="h-100 h-100 d-flex align-items-center" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+            <div class="p-md-5 p-4">
+              <div class="mb-md-4">
+                <small class="text-white">
+                  Embark on a seamless journey to unforgettable destinations
+                </small>
+              </div>
+              <h2 class="cfont text-white mb-md-5 my-3">
+                Best International <br>
+                Deals
+              </h2>
+              <div>
+                <a href="/International">
+                  <button class="cssbuttons-io-white">
+                    <span>View Packages</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="" style="position: relative;">
+          <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/h32.jpg" class="img-fluid" alt="">
+          <div class="h-100 h-100 d-flex align-items-center" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+            <div class="p-md-5 p-4">
+              <div class="mb-md-4">
+                <small class="text-white">
+                  Condense travel plans with our personalized 'Short It' service.
+                </small>
+              </div>
+              <h2 class="cfont text-white mb-md-5 my-3">
+                Best Domestic <br>
+                Deals
+              </h2>
+              <div>
+                <a href="/Domestic">
+                  <button class="cssbuttons-io-white">
+                    <span>View Packages</span>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<% } %>
+
+
+<% }) %>
+
+<!-- counter -->
+<section class="mb-5">
+  <div class="container-fluid">
+    <div class="row my-3">
+      <div class="col-md-3 col-6 p-4 text-center">
+        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/pin-map-1.svg" class="img-fluid mb-3" alt="">
+        <h2 class="fw-bold">
+          1,000 +
+        </h2>
+        <div>
+          <small>
+            5 Star Ratings
+          </small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 p-4 text-center">
+        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/route-1.svg" class="img-fluid mb-3" alt="">
+        <h2 class="fw-bold">
+          5,000 +
+        </h2>
+        <div>
+          <small>
+            Successful Trips
+          </small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 p-4 text-center">
+        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/user.svg" class="img-fluid mb-3" alt="">
+        <h2 class="fw-bold">
+          10,000 +
+        </h2>
+        <div>
+          <small>
+            Happy People
+          </small>
+        </div>
+      </div>
+      <div class="col-md-3 col-6 p-4 text-center">
+        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/balloon.svg" class="img-fluid mb-3" alt="">
+        <h2 class="fw-bold">
+          200 +
+        </h2>
+        <div>
+          <small>
+            Location Covered
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<%- include('./partials/footer') %>

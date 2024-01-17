@@ -1,0 +1,236 @@
+<%- include('./partials/navbar') %>
+
+
+<section id="smallMainHero">
+  <nav class="d-none d-md-block p-2" id="largerNav">
+    <div class="row align-items-center">
+      <div class="col-3">
+        <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 100px;">
+      </div>
+      <div class="col-6 text-center">
+        <a href="/" class="px-1 mx-2">
+          <small>
+            Home
+          </small>
+        </a>
+        <a href="/international" class="px-1 mx-2">
+          <small>
+            International
+          </small>
+        </a>
+        <a href="/domestic" class="px-1 mx-2">
+          <small>
+            Domestic
+          </small>
+        </a>
+        <a href="/blogs" class="activeBtn px-1 mx-2">
+          <small>
+            Blogs
+          </small>
+        </a>
+        <a href="/about" class="px-1 mx-2">
+          <small>
+            About
+          </small>
+        </a>
+      </div>
+      <div class="col-3 text-end">
+        <a href="/contact">
+          <button class="cssbuttons-io-button">
+            <span>Contact Us</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="d-block d-md-none" id="smallNav">
+
+    <div class="container-fluid p-3">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+        </div>
+        <div class="col-6 text-end">
+          <h4 style="cursor:pointer" class="cfont text-white mb-0" onclick="openNav()">
+            MENU
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+
+      <!-- <span >
+        <i class="fa-solid fa-xmark"></i>
+      </span> -->
+
+      <div class="h-25 p-4 d-flex align-items-center justify-content-center" style="position: relative;">
+
+        <div class="text-center">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+          <h5 class="cfont">
+            Pathik Your Own Trip
+          </h5>
+        </div>
+
+
+        <div style="position: absolute; top: 20px; right: 30px;" onclick="closeNav()">
+          <i class="fa-solid fa-xmark fs-3"></i>
+        </div>
+
+      </div>
+      <div class="h-50 p-4">
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/">
+            Home
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/international">
+            International
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/domestic">
+            Domestic
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/blogs">
+            <b>
+              Blogs
+            </b>
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/about">
+            About
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/contact">
+            Contact Us
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+      </div>
+      <div class="h-25 p-4 d-flex align-items-end justify-content-center">
+        <section>
+          <div class="pb-3">
+            <i class="fa-solid fa-phone pe-1"></i>
+            <a href="" class="p-0">
+              +92 54343 84374
+            </a>
+          </div>
+          <div class="pb-3">
+            <i class="fa-regular fa-envelope pe-1"></i>
+            <a href="" class="p-0">
+              info@pathikyourowntrip.com
+            </a>
+          </div>
+          <div class="pb-3">
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-end pb-5">
+      <div class="col-12 text-center text-md-start">
+        <h1 class="cfont text-white">
+          Recent Blogs
+        </h1>
+        <h6 class="text-white">
+          By Pathik Your Own Trip
+        </h6>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+
+<section class="mt-5">
+  <div class="container-fluid px-md-5">
+    <div class="row">
+      <div class="col-md-3 col-6 p-md-3">
+        <div class="blogCard">
+          <div>
+            <img src="publicAssets/img/gordon-mak-rX2cj2FD4do-unsplash-600x600.jpg" class="img-fluid" alt="">
+          </div>
+          <section class="pt-3">
+            <div>
+              <small>
+                June 6, 2016
+              </small>
+            </div>
+            <h4 class="cfont">
+              How to travel with paper map
+            </h4>
+          </section>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-6 p-md-3">
+        <div class="blogCard">
+          <div>
+            <img src="publicAssets/img/caption.jpg" class="img-fluid" alt="">
+          </div>
+          <section class="pt-3">
+            <div>
+              <small>
+                June 6, 2016
+              </small>
+            </div>
+            <h4 class="cfont">
+              How to travel with paper map
+            </h4>
+          </section>
+        </div>
+
+      </div>
+      <div class="col-md-3 col-6 p-md-3">
+        <div class="blogCard">
+          <div>
+            <img src="publicAssets/img/gordon-mak-rX2cj2FD4do-unsplash-600x600.jpg" class="img-fluid" alt="">
+          </div>
+          <section class="pt-3">
+            <div>
+              <small>
+                June 6, 2016
+              </small>
+            </div>
+            <h4 class="cfont">
+              How to travel with paper map
+            </h4>
+          </section>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<%- include('./partials/footer') %>

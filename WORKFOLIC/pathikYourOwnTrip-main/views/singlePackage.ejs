@@ -1,0 +1,582 @@
+<%- include('./partials/navbar') %>
+
+
+<section id="smallMainHero">
+  <nav class="d-none d-md-block p-2" id="largerNav">
+    <div class="row align-items-center">
+      <div class="col-3">
+        <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 100px;">
+      </div>
+      <div class="col-6 text-center">
+        <a href="/" class="activeBtn px-1 mx-2">
+          <small>
+            Home
+          </small>
+        </a>
+        <a href="/international" class="px-1 mx-2">
+          <small>
+            International
+          </small>
+        </a>
+        <a href="/domestic" class="px-1 mx-2">
+          <small>
+            Domestic
+          </small>
+        </a>
+        <a href="/blogs" class="px-1 mx-2">
+          <small>
+            Blogs
+          </small>
+        </a>
+        <a href="/about" class="px-1 mx-2">
+          <small>
+            About
+          </small>
+        </a>
+      </div>
+      <div class="col-3 text-end">
+        <a href="/contact">
+          <button class="cssbuttons-io-button">
+            <span>Contact Us</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="d-block d-md-none" id="smallNav">
+
+    <div class="container-fluid p-3">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+        </div>
+        <div class="col-6 text-end">
+          <h4 style="cursor:pointer" class="cfont text-white mb-0" onclick="openNav()">
+            MENU
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+
+      <!-- <span >
+        <i class="fa-solid fa-xmark"></i>
+      </span> -->
+
+      <div class="h-25 p-4 d-flex align-items-center justify-content-center" style="position: relative;">
+
+        <div class="text-center">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+          <h5 class="cfont">
+            Pathik Your Own Trip
+          </h5>
+        </div>
+
+
+        <div style="position: absolute; top: 20px; right: 30px;" onclick="closeNav()">
+          <i class="fa-solid fa-xmark fs-3"></i>
+        </div>
+
+      </div>
+      <div class="h-50 p-4">
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/">
+            Home
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/international">
+            International
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/domestic">
+            Domestic
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/blogs">
+            Blogs
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/about">
+            About
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/contact">
+            Contact Us
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+      </div>
+      <div class="h-25 p-4 d-flex align-items-end justify-content-center">
+        <section>
+          <div class="pb-3">
+            <i class="fa-solid fa-phone pe-1"></i>
+            <a href="" class="p-0">
+              +92 54343 84374
+            </a>
+          </div>
+          <div class="pb-3">
+            <i class="fa-regular fa-envelope pe-1"></i>
+            <a href="" class="p-0">
+              info@pathikyourowntrip.com
+            </a>
+          </div>
+          <div class="pb-3">
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-end pb-5">
+      <div class="col-12 text-center text-md-start">
+        <h1 class="cfont text-white">
+          Best of <%=packageData.packageLocation %>
+        </h1>
+        <a href="/category/<%=packageData.packageLocation%>" class="text-decoration-none">
+          <h6 class="text-white">
+            View More Packages
+          </h6>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+
+
+<!-- package details  -->
+<section class="my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 px-4">
+
+        <div>
+          <h5 class="">
+            STARTING FROM ₹ <%=packageData.packagePrice%>/-
+          </h5>
+          <h1 class="cfont">
+            <%=packageData.packageTitle%>
+          </h1>
+          <div class="mb-4 mt-2">
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+            <i class="fa-solid fa-star text-warning"></i>
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Detail -->
+        <div class="mt-4">
+          <h3 class="cfont">
+            Detail
+          </h3>
+
+          <% let paragraphs = packageData.packageOverview.split('. '); %>
+          <% let middleIndex = Math.ceil(paragraphs.length / 2); %>
+          <% let updatedPackageOverview1 = paragraphs.slice(0, middleIndex).join('. ') %>
+          <% let updatedPackageOverview2 = paragraphs.slice(middleIndex).join('. '); %>
+          <p style="text-align: justify;" class="text-muted">
+            <small>
+              <%=updatedPackageOverview1%>. <br>
+              <%=updatedPackageOverview2%>
+            </small>
+          </p>
+
+        </div>
+
+        <!-- price include and Excludes -->
+        <div class="mt-5">
+          <div class="row">
+            <div class="col-6">
+              <h4 class="cfont">
+                Price Includes
+              </h4>
+              <div class="mt-3">
+
+                <% let includesData = packageData.packageIncludes %>
+                <% for(i = 0; includesData.length > i; i++ ){ %>
+                <div class="mb-2">
+                  <small style="font-size: 0.75rem;">
+                    <i class="fa-solid fa-check"></i>
+                    <%= includesData[i] %>
+                  </small>
+                </div>
+                <% } %>
+
+
+              </div>
+            </div>
+
+            <div class="col-6">
+              <h4 class="cfont">
+                Price Excludes
+              </h4>
+              <div class="mt-3">
+
+
+                <% let excludesData = packageData.packageExcludes %>
+                <% for(i = 0; excludesData.length > i; i++ ){ %>
+                <div class="mb-2">
+                  <small style="font-size: 0.75rem;">
+                    <i class="fa-solid fa-xmark"></i>
+                    <%= excludesData[i] %>
+                  </small>
+                </div>
+                <% } %>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr>
+
+        <!-- Itinerary -->
+        <div class="my-5">
+          <h4 class="cfont">
+            Itinerary
+          </h4>
+
+          <div class="accordion accordion-flush mt-4" id="accordionExample">
+            <% for(i=0; packageData.packageItinerary.length > i; i++){%>
+            <%  if(i==0){ %>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%=i%>" aria-expanded="true" aria-controls="collapse<%=i%>">
+
+                  <%=packageData.packageItinerary[i][0]%>
+
+                </button>
+              </h2>
+              <div id="collapse<%=i%>" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <% for(j=1; packageData.packageItinerary[i].length > j; j++) {%>
+                  <p style="text-align: justify;">
+                    <small style="font-size: 14px;" class="text-muted">
+                      + <%=packageData.packageItinerary[i][j]%>
+                    </small>
+                  </p>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+
+            <% } else { %>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<%=i%>" aria-expanded="false" aria-controls="collapse<%=i%>">
+                  <%=packageData.packageItinerary[i][0]%>
+                </button>
+              </h2>
+              <div id="collapse<%=i%>" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <% for(j=1; packageData.packageItinerary[i].length > j; j++) {%>
+                  <p style="text-align: justify;">
+                    <small style="font-size: 14px;" class="text-muted">
+                      + <%=packageData.packageItinerary[i][j]%>
+                    </small>
+                  </p>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+
+            <% } %>
+
+            <% } %>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-5 px-4">
+
+        <div class="mb-4">
+          <img src="packages/<%=packageData.packageImg%>" class="img-fluid rounded-4" alt="">
+        </div>
+
+        <div class="row bg-light rounded-2 p-4 mb-4 lightShadow">
+          <div class="col-6 text-center">
+            <img src="https://www.trippybabatours.com/img/icon/icons8-guide-50.png" alt="" style="width: 50px;" class="">
+            <div>
+              <small class="cfont">
+                Package Duration
+              </small><br>
+              <small class="mb-0">
+                <%=packageData.packageDuration%>
+              </small>
+            </div>
+          </div>
+          <div class="col-6 text-center ">
+            <img src="https://www.trippybabatours.com/img/icon/icons8-meal-50.png" alt="" style="width: 50px;" class="">
+            <div>
+              <small class="cfont">
+                Package Meal
+              </small><br>
+              <small class="mb-0">
+                <%=packageData.packageMeal%>
+              </small>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row bg-light rounded-2 p-4 mb-4 lightShadow">
+          <div class="col-6 text-center">
+            <img src="https://www.trippybabatours.com/img/icon/icons8-road-50.png" alt="" style="width: 50px;" class="">
+            <div>
+              <small class="cfont">
+                Departure City
+              </small><br>
+              <small class="mb-0">
+                <%=packageData.packageDepartureCity%>
+              </small>
+            </div>
+          </div>
+          <div class="col-6 text-center ">
+            <img src="https://www.trippybabatours.com/img/icon/icons8-bus-50.png" alt="" style="width: 50px;" class="">
+            <div>
+              <small class="cfont">
+                Transportation
+              </small><br>
+              <small class="mb-0">
+                <%=packageData.packageTransportation%>
+              </small>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="bookingForm p-md-5 p-4 shadow-lg rounded-4 mt-5">
+          <div class="d-flex align-items-center">
+            <h5 class="cfont">
+              Best Seller
+            </h5>
+            <span class="ps-3">
+              <i class="fa-solid fa-tag"></i>
+            </span>
+          </div>
+
+          <div class="mt-2 mb-5">
+            <h6 class="">
+              STARTING FROM ₹ <%=packageData.packagePrice%>/-
+              <input type="hidden" value="<%=packageData._id%>" id="packageId">
+            </h6>
+          </div>
+
+          <div class="mb-4">
+            <small>
+              Holiday Category
+            </small><br>
+            <input type="hidden" name="" value="<%=JSON.stringify(packageData.priceCategory)%>" id="priceData">
+            <select class="form-select mt-2 selectList" aria-label="Default select example" id="priceDropDown">
+              <option selected disabled value="">Holiday Type</option>
+              <option value="Budget">Budget for &nbsp; ₹<%=packageData.priceCategory.budgetPrice%></option>
+              <option value="Standard">Standard for &nbsp; ₹<%=packageData.priceCategory.standardPrice%></option>
+              <option value="Deluxe">Deluxe for &nbsp; ₹<%=packageData.priceCategory.deluxePrice%></option>
+              <option value="Luxury">Luxury for &nbsp; ₹<%=packageData.priceCategory.luxuryPrice%></option>
+              <option value="Premium">Premium for &nbsp; ₹<%=packageData.priceCategory.premiumPrice%></option>
+            </select>
+          </div>
+
+          <div class="mb-md-4 row">
+            <div class="col-6 mb-4 mb-md-0">
+              <small>
+                No. of Rooms
+              </small><br>
+              <select class="form-select mt-2 selectList" aria-label="Default select example" id="roomCount">
+                <option selected disabled>Select Rooms</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+            <div class="col-6 mb-4 mb-md-0">
+              <small>
+                No. of Adults
+              </small><br>
+              <select class="form-select mt-2 selectList" aria-label="Default select example" id="peopleCount">
+                <option selected disabled value="0" >Select Adults</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-4 row">
+            <div class="col-6">
+              <small>
+                Full Name
+              </small><br>
+              <input type="text" class="cInput border-bottom p-2 w-100" name="Name" id="fullNameInp">
+            </div>
+            <div class="col-6">
+              <small>
+                Mobile
+              </small><br>
+              <input type="number" class="cInput border-bottom p-2 w-100" name="Mobile" id="mobileInp">
+            </div>
+          </div>
+
+          <div class="mb-4 row">
+            <div class="col-6">
+              <small>
+                Email
+              </small><br>
+              <input type="email" class="cInput border-bottom p-2 w-100" name="Email" id="emailInp">
+            </div>
+            <div class="col-6">
+              <small>
+                Date
+              </small><br>
+              <input type="hidden" value="<%=packageData.datesList%>" id="datesListArray">
+              <input type="text" class="cInput border-bottom p-2 w-100" name="datesList" id="calendar" placeholder="DD MM YYYY">
+            </div>
+          </div>
+
+          <div class="">
+            <button class="cssbuttons-io-button w-100" id="bookingBtn">
+              Pay & Book ₹ <span class="mainPriceBox"><%=packageData.packagePrice%></span>/-
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- packages carousel -->
+<section class="py-md-5 pb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-11 m-auto mb-4 align-items-center">
+        <section class="d-flex justify-content-between align-items-center">
+          <div>
+            <h4 class="cfont1 mb-0 greenTxt">
+              Check out our
+            </h4>
+            <h2 class="cfont">
+              More <%=packageData.packageLocation %> Packages
+            </h2>
+          </div>
+          <div class="pe-5">
+            <a href="/category/<%=packageData.packageLocation%>" class="text-decoration-none text-dark">
+              See All
+              <span style="transform: rotate('45deg');">
+                <i class="fa-solid fa-arrow-right"></i>
+              </span>
+            </a>
+          </div>
+        </section>
+      </div>
+      <div class="col-11 m-auto p-md-5 p-3" style="border-radius: 10px; background: #f7f8fa;">
+
+        <section class="swiper swiperCarousel1">
+          <div class="swiper-wrapper">
+            <% relatedPackageData.forEach((value,index)=>{ %>
+            <div class="swiper-slide p-2">
+              <div class="bg-white rounded-4 overflow-hidden">
+                <a href="/category/<%=value.packageLocation%>/<%=value.packageURL%>" class="link-body-emphasis text-decoration-none">
+                  <div class="" style="position: relative;">
+                    <img src="packages/<%=value.packageImg%>" class="img-fluid" alt="">
+                    <div class="bg-white p-2 rounded-3" style="position: absolute; right: 10px; top: 10px;">
+                      <small class="">
+                        ₹
+                        <%=value.packagePrice%>/-
+                      </small>
+                    </div>
+                  </div>
+                  <div class="p-2">
+                    <div class="">
+                      <div class="p-2 mb-3 border-bottom">
+                        <div class="">
+                          <div>
+                            <small>
+                              <i class="fa-solid fa-location-arrow greenTxt"></i>
+                            </small> &nbsp;
+                            <small>
+                              <%=value.packageLocation%> Trips
+                            </small>
+                          </div>
+                          <div>
+                            <small>
+                              <i class="fa-solid fa-clock-rotate-left greenTxt"></i>
+                              &nbsp;
+                              <small>
+                                <%=value.packageDuration%>
+                              </small>
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="px-1">
+                      <p>
+                        <small>
+                          <%=value.packageTitle%>
+                        </small>
+                      </p>
+                    </div>
+
+
+                  </div>
+                </a>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<%- include('./partials/footer') %>

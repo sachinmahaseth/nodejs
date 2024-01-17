@@ -1,0 +1,638 @@
+<%- include('./partials/navbar') %>
+
+
+  <section class="vh-100" id="mainHeroBg" back>
+
+    <nav class="d-none d-md-block p-2" id="largerNav">
+      <div class="row align-items-center">
+        <div class="col-3">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 100px;">
+        </div>
+        <div class="col-6 text-center">
+          <a href="/" class="activeBtn px-1 mx-2">
+            <small>
+              Home
+            </small>
+          </a>
+          <a href="/international" class="px-1 mx-2">
+            <small>
+              International
+            </small>
+          </a>
+          <a href="/domestic" class="px-1 mx-2">
+            <small>
+              Domestic
+            </small>
+          </a>
+          <a href="/blogs" class="px-1 mx-2">
+            <small>
+              Blogs
+            </small>
+          </a>
+          <a href="/about" class="px-1 mx-2">
+            <small>
+              About
+            </small>
+          </a>
+        </div>
+        <div class="col-3 text-end">
+          <a href="/contact">
+            <button class="cssbuttons-io-button">
+              <span>Contact Us</span>
+            </button>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+
+    <header class="d-block d-md-none" id="smallNav">
+
+      <div class="container-fluid p-3">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+          </div>
+          <div class="col-6 text-end">
+            <h4 style="cursor:pointer" class="cfont text-white mb-0" onclick="openNav()">
+              MENU
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <div id="mySidenav" class="sidenav">
+
+        <!-- <span >
+        <i class="fa-solid fa-xmark"></i>
+      </span> -->
+
+        <div class="h-25 p-4 d-flex align-items-center justify-content-center" style="position: relative;">
+
+          <div class="text-center">
+            <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+            <h5 class="cfont">
+              Pathik Your Own Trip
+            </h5>
+          </div>
+
+
+          <div style="position: absolute; top: 20px; right: 30px;" onclick="closeNav()">
+            <i class="fa-solid fa-xmark fs-3"></i>
+          </div>
+
+        </div>
+        <div class="h-50 p-4">
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/">
+              <b>
+                Home
+              </b>
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/international">
+              International
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/domestic">
+              Domestic
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/blogs">
+              Blogs
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/about">
+              About
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+            <a href="/contact">
+              Contact Us
+            </a>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+        </div>
+        <div class="h-25 p-4 d-flex align-items-end justify-content-center">
+          <section>
+            <div class="pb-3">
+              <i class="fa-solid fa-phone pe-1"></i>
+              <a href="" class="p-0">
+                +92 54343 84374
+              </a>
+            </div>
+            <div class="pb-3">
+              <i class="fa-regular fa-envelope pe-1"></i>
+              <a href="" class="p-0">
+                info@pathikyourowntrip.com
+              </a>
+            </div>
+            <div class="pb-3">
+              <a href="" class="pe-3 py-2 ps-0">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="" class="pe-3 py-2 ps-0">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="" class="pe-3 py-2 ps-0">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+
+
+    <div class="container-fluid h-100 px-5" id="heroText">
+      <div class="row centerRow h-100 align-items-center justify-content-center">
+        <div class="col-11 m-auto text-center">
+          <h1 class="cfont" style="text-transform: uppercase;">
+            Pathik Your Own <span class="typed-words"> Trip </span>
+          </h1>
+        </div>
+
+        <div class="heroCounter">
+          <div class="row">
+            <div class="col-md-3 col-6 mb-3 mb-md-0">
+              <div class="text-center">
+                <i class="fa-solid fa-star text-white" style="width: 20px !important;"></i>
+                <div class="mt-2">
+                  <h5 class="text-white fw-normal">
+                    <span class="counter">500</span> + <br>
+                    5 Star Ratings
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 mb-md-0">
+              <div class="text-center">
+                <i class="fa-solid fa-headset text-white" style="width: 20px !important;"></i>
+                <div class="mt-2">
+                  <h5 class="text-white fw-normal">
+                    <span class="counter">24</span>/
+                    <span class="counter">7</span>
+                    <br>
+                    Assistance
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 mb-md-0">
+              <div class="text-center">
+                <i class="fa-solid fa-plane text-white" style="width: 20px !important;"></i>
+                <div class="mt-2">
+                  <h5 class="text-white fw-normal">
+                    <span class="counter">5000</span>
+                    + <br>
+                    Successful <br class="d-block d-md-none"> Trips
+                  </h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3 col-6 mb-3 mb-md-0">
+              <div class="text-center">
+                <i class="fa-solid fa-indian-rupee-sign text-white" style="width: 20px !important;"></i>
+                <div class="mt-2">
+                  <h5 class="text-white fw-normal">
+                    <span class="counter">100</span>% <br>
+                    Best Price Assured
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+
+
+  <!-- domestic -->
+
+  <section class="my-5"
+    style="background: url(https://travel.nicdark.com/travel-mountain-wordpress-theme/wp-content/uploads/sites/6/2023/06/bg-01.png); background-size: contain; background-position: top center;">
+    <div style="background: rgba(255, 255, 255, 0.75);">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 mb-4 text-center">
+            <h4 class="cfont1 mb-0 greenTxt">
+              A Glimpse of
+            </h4>
+            <h2 class="cfont">
+              Our Top Destinations
+            </h2>
+          </div>
+
+          <div class="">
+            <div class="row">
+
+              <% domesticData.forEach((value,index)=>{ %>
+                <% if (index < 6) { %>
+                  <div class="col-md-2 col-4">
+                    <a href="/category/<%=value.packageLocation%>" class="text-decoration-none">
+                      <div class="categoryBox p-md-3 text-center">
+                        <section>
+                          <img src="publicAssets/img/circleCategory/<%=value.packageLocation%>.png" alt=""
+                            class="img-fluid">
+                        </section>
+                        <div class="">
+                          <h5 class="cfont my-1">
+                            <%=value.packageLocation%>
+                          </h5>
+                          <div>
+                            <small>
+                              <%=value.count%> +
+                            </small>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <% } %>
+                    <% }) %>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- popular tours -->
+  <section class="my-5"
+    style="background: url(https://ld-wp73.template-help.com/wordpress/prod_19731/v4/wp-content/uploads/2018/07/bg-home-5-1.png); background-size: cover; background-position: center center; ">
+    <div style="background: rgba(255, 255, 255, 0.7);">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4 col-6 order-0 order-md-0 mb-3 mb-md-0">
+            <a href="/category/Kashmir">
+              <div class="popularCard">
+                <img src="publicAssets/img/banners/Kashmir.png" class="img-fluid rounded-4" alt="">
+                <div class="rounded-4">
+                  <h3 class="cfont text-white">
+                    Kashmir Tours
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 py-md-1 order-2 order-md-1">
+            <div class="row">
+              <div class="col-6 col-md-12 my-3">
+                <a href="/category/Bali">
+                  <div class="popularCard">
+                    <img src="publicAssets/img/banners/Bali.png" class="img-fluid rounded-4" alt="">
+                    <div class="rounded-4">
+                      <h3 class="cfont text-white">
+                        Bali Tours
+                      </h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-6 col-md-12 my-3">
+                <a href="/category/Singapore">
+                  <div class="popularCard">
+                    <img src="publicAssets/img/banners/Singapore.png" class="img-fluid rounded-4" alt="">
+                    <div class="rounded-4">
+                      <h3 class="cfont text-white">
+                        Singapore Tours
+                      </h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6 order-1 order-md-2 mb-3 mb-md-0">
+            <a href="/category/Manali">
+              <div class="popularCard">
+                <img src="publicAssets/img/banners/Manali.png" class="img-fluid rounded-4" alt="">
+                <div class="rounded-4">
+                  <h3 class="cfont text-white">
+                    Manali Tours
+                  </h3>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <% allPackageData.forEach((value,index)=>{ %>
+    <!-- packages carousel -->
+    <section class="py-md-5 pb-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-11 m-auto mb-4 align-items-center">
+            <section class="d-flex justify-content-between align-items-center">
+              <div>
+                <h4 class="cfont1 mb-0 greenTxt">
+                  Check out our
+                </h4>
+                <h2 class="cfont">
+                  <%=value._id%> Tours
+                </h2>
+              </div>
+              <div class="pe-5">
+                <a href="category/<%=value._id%>" class="text-decoration-none text-dark">
+                  See All
+                  <span style="transform: rotate('45deg');">
+                    <i class="fa-solid fa-arrow-right"></i>
+                  </span>
+                </a>
+              </div>
+            </section>
+          </div>
+          <div class="col-11 m-auto p-md-5 p-3" style="border-radius: 10px; background: #f7f8fa;">
+
+            <section class="swiper swiperCarousel1">
+              <div class="swiper-wrapper">
+                <% value.products.forEach((value,index)=>{ %>
+                  <div class="swiper-slide p-2">
+                    <div class="bg-white rounded-4 overflow-hidden">
+                      <a href="/category/<%=value.packageLocation%>/<%=value.packageURL%>"
+                        class="link-body-emphasis text-decoration-none">
+                        <div class="" style="position: relative;">
+                          <img src="packages/<%=value.packageImg%>" class="img-fluid" alt="">
+                          <div class="bg-white p-2 rounded-3" style="position: absolute; right: 10px; top: 10px;">
+                            <small class="">
+                              ₹
+                              <%=value.packagePrice%>/-
+                            </small>
+                          </div>
+                        </div>
+                        <div class="p-2">
+                          <div class="">
+                            <div class="p-2 mb-3 border-bottom">
+                              <div class="">
+                                <div>
+                                  <small>
+                                    <i class="fa-solid fa-location-arrow greenTxt"></i>
+                                  </small> &nbsp;
+                                  <small>
+                                    <%=value.packageLocation%> Trips
+                                  </small>
+                                </div>
+                                <div>
+                                  <small>
+                                    <i class="fa-solid fa-clock-rotate-left greenTxt"></i>
+                                    &nbsp;
+                                    <small>
+                                      <%=value.packageDuration%>
+                                    </small>
+                                  </small>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="px-1">
+                            <p>
+                              <small>
+                                <%=value.packageTitle%>
+                              </small>
+                            </p>
+                          </div>
+
+
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <% }) %>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <% if(index==2){ %>
+      <!-- mid banner carousel -->
+      <section class="my-5">
+        <div class="container-fluid px-md-5">
+          <div class="row px-md-4">
+            <div class="col-12 text-center mb-4">
+              <h4 class="cfont1 mb-0 greenTxt">
+                Give Eyes To
+              </h4>
+              <h2 class="cfont">
+                Our Premier Tour Packages
+              </h2>
+            </div>
+            <div class="col-12 overflow-hidden">
+              <!-- Slider main container -->
+              <div class="swiper swiperCarousel4">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper pb-5">
+
+                  <% slidersData.forEach((value)=>{ %>
+
+                    <div class="swiper-slide">
+                      <a href="/category/<%=value.packageLocation%>" class="link-body-emphasis text-decoration-none">
+                        <img src="banners/<%=value.sliderImg%>" alt="" class="img-fluid rounded-4">
+                      </a>
+                    </div>
+
+                    <% }) %>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <% } %>
+
+        <% if(index==4){ %>
+          <!-- counter -->
+          <section class="mb-5">
+            <div class="container-fluid">
+              <div class="row my-3">
+                <div class="col-md-3 col-6 p-4 text-center">
+                  <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/pin-map-1.svg"
+                    class="img-fluid mb-3" alt="">
+                  <h2 class="fw-bold">
+                    1,000 +
+                  </h2>
+                  <div>
+                    <small>
+                      5 Star Ratings
+                    </small>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6 p-4 text-center">
+                  <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/route-1.svg" class="img-fluid mb-3"
+                    alt="">
+                  <h2 class="fw-bold">
+                    5,000 +
+                  </h2>
+                  <div>
+                    <small>
+                      Successful Trips
+                    </small>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6 p-4 text-center">
+                  <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/user.svg" class="img-fluid mb-3"
+                    alt="">
+                  <h2 class="fw-bold">
+                    10,000 +
+                  </h2>
+                  <div>
+                    <small>
+                      Happy People
+                    </small>
+                  </div>
+                </div>
+                <div class="col-md-3 col-6 p-4 text-center">
+                  <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/balloon.svg" class="img-fluid mb-3"
+                    alt="">
+                  <h2 class="fw-bold">
+                    200 +
+                  </h2>
+                  <div>
+                    <small>
+                      Location Covered
+                    </small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <% } %>
+
+
+            <% if(index==6){ %>
+              <!-- International and domestic -->
+              <section class="mb-5">
+                <div class="container-fluid px-md-5">
+                  <div class="row px-md-5">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                      <div class="" style="position: relative;">
+                        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/h31.jpg" class="img-fluid"
+                          alt="">
+                        <div class="h-100 h-100 d-flex align-items-center"
+                          style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+                          <div class="p-md-5 p-4">
+                            <div class="mb-md-4">
+                              <small class="text-white">
+                                Embark on a seamless journey to unforgettable destinations
+                              </small>
+                            </div>
+                            <h2 class="cfont text-white mb-md-5 my-3">
+                              Best International <br>
+                              Deals
+                            </h2>
+                            <div>
+                              <a href="/International">
+                                <button class="cssbuttons-io-white">
+                                  <span>View Packages</span>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="" style="position: relative;">
+                        <img src="https://demoapus1.com/tourio/wp-content/uploads/2023/08/h32.jpg" class="img-fluid"
+                          alt="">
+                        <div class="h-100 h-100 d-flex align-items-center"
+                          style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;">
+                          <div class="p-md-5 p-4">
+                            <div class="mb-md-4">
+                              <small class="text-white">
+                                Condense travel plans with our personalized 'Short It' service.
+                              </small>
+                            </div>
+                            <h2 class="cfont text-white mb-md-5 my-3">
+                              Best Domestic <br>
+                              Deals
+                            </h2>
+                            <div>
+                              <a href="/Domestic">
+                                <button class="cssbuttons-io-white">
+                                  <span>View Packages</span>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <% } %>
+
+
+                <% }) %>
+                  <div class="connect">
+
+
+                    <div class="hover-icon-container">
+                      <img class="hover-icon img-fluid" src="publicAssets/img/icons8-slide-up-80.png"
+                        style="width: 50px; height: 50px;" alt=" Icon">
+                      <div class="hover-text">
+                        <div class="row">
+                          <div class="col-md-12 p-3 border-bottom p-2">
+                            <i class="fs-5 fa-solid fa-headphones-simple "></i>
+                            <p class="d-inline"> <a href="tel:+917240164702"
+                                class="text-decoration-none ms-4  text-dark"> Request A
+                                Call Back </a></p>
+                          </div>
+
+                          <div class="col-md-12 p-3 border-bottom p-2">
+                            <i class="fs-5 fa-brands fa-square-whatsapp text-success"></i>
+                            <p class="d-inline"><a
+                                href="https://api.whatsapp.com/send/?phone=7240164702&text=Hi%2C%0A%0AI+visited+Pathik+your+own+Trip+at+https%3A%2F%2Fwww.pathikyourowntrip.com%2F+.+I+am+interested+in+this+offer.+Do+contact+me+to+discuss+it+further.%0A%0AThanks%2C&type=phone_number&app_absent=0"
+                                class="text-decoration-none ms-4 text-dark"> Chat With Our
+                                Executive </a></p>
+                          </div>
+                          <div class="col-md-12 p-3 border-bottom p-2">
+                            <i class="fs-5 fa-solid fa-phone"></i></i>
+                            <p class="d-inline"><a href="tel:+917240164702" class="text-decoration-none ms-4 text-dark">
+                                Call Now </a>
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="https://api.whatsapp.com/send/?phone=7240164702&text=Hi%2C%0A%0AI+visited+Pathik+your+own+Trip+at+https%3A%2F%2Fwww.pathikyourowntrip.com%2F+.+I+am+interested+in+this+offer.+Do+contact+me+to+discuss+it+further.%0A%0AThanks%2C&type=phone_number&app_absent=0"
+                    target="_blank">
+                    <div class="whatsapp-icon">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                  </a>
+
+
+
+                  <%- include('./partials/footer') %>

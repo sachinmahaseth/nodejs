@@ -1,0 +1,281 @@
+<%- include('./partials/navbar') %>
+
+
+<section id="smallMainHero">
+  <nav class="d-none d-md-block p-2" id="largerNav">
+    <div class="row align-items-center">
+      <div class="col-3">
+        <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 100px;">
+      </div>
+      <div class="col-6 text-center">
+        <a href="/" class="px-1 mx-2">
+          <small>
+            Home
+          </small>
+        </a>
+        <a href="/international" class="px-1 mx-2">
+          <small>
+            International
+          </small>
+        </a>
+        <a href="/domestic" class="px-1 mx-2">
+          <small>
+            Domestic
+          </small>
+        </a>
+        <a href="/blogs" class="px-1 mx-2">
+          <small>
+            Blogs
+          </small>
+        </a>
+        <a href="/about" class="px-1 mx-2">
+          <small>
+            About
+          </small>
+        </a>
+      </div>
+      <div class="col-3 text-end">
+        <a href="/contact">
+          <button class="cssbuttons-io-button">
+            <span>Contact Us</span>
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="d-block d-md-none" id="smallNav">
+
+    <div class="container-fluid p-3">
+      <div class="row align-items-center">
+        <div class="col-6">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+        </div>
+        <div class="col-6 text-end">
+          <h4 style="cursor:pointer" class="cfont text-white mb-0" onclick="openNav()">
+            MENU
+          </h4>
+        </div>
+      </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+
+      <!-- <span >
+        <i class="fa-solid fa-xmark"></i>
+      </span> -->
+
+      <div class="h-25 p-4 d-flex align-items-center justify-content-center" style="position: relative;">
+
+        <div class="text-center">
+          <img src="publicAssets/img/path-logo.png" alt="" class="img-fluid" style="width: 80px;">
+          <h5 class="cfont">
+            Pathik Your Own Trip
+          </h5>
+        </div>
+
+
+        <div style="position: absolute; top: 20px; right: 30px;" onclick="closeNav()">
+          <i class="fa-solid fa-xmark fs-3"></i>
+        </div>
+
+      </div>
+      <div class="h-50 p-4">
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/">
+            Home
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/international">
+            International
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/domestic">
+            Domestic
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/blogs">
+            Blogs
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/about">
+            About
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+        <div class="mb-2 border-bottom d-flex align-items-center justify-content-between pe-4 pb-2">
+          <a href="/contact">
+            <b>
+              Contact Us
+            </b>
+          </a>
+          <i class="fa-solid fa-caret-right"></i>
+        </div>
+      </div>
+      <div class="h-25 p-4 d-flex align-items-end justify-content-center">
+        <section>
+          <div class="pb-3">
+            <i class="fa-solid fa-phone pe-1"></i>
+            <a href="" class="p-0">
+              +92 54343 84374
+            </a>
+          </div>
+          <div class="pb-3">
+            <i class="fa-regular fa-envelope pe-1"></i>
+            <a href="" class="p-0">
+              info@pathikyourowntrip.com
+            </a>
+          </div>
+          <div class="pb-3">
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="" class="pe-3 py-2 ps-0">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="container h-100">
+    <div class="row h-100 align-items-end pb-5">
+      <div class="col-12 text-center text-md-start">
+        <h1 class="cfont text-white">
+          Contact Us
+        </h1>
+        <h6 class="text-white">
+          By Pathik Your Own Trip
+        </h6>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- contact -->
+<section class="pt-5 pb-4">
+  <div class="container-fluid px-5">
+    <div class="row">
+      <div class="col-md-4 text-center px-5">
+        <img src="publicAssets/img/icon1.png" alt="">
+        <h4 class="cfont">
+          Phone
+        </h4>
+        <p class="text-muted">
+          <small>
+            Reach us directly at our helpline for prompt assistance and travel guidance.
+          </small>
+        </p>
+        <a class="text-decoration-none" href="tel:+917240164702">+91 7240164702</a>,
+        <a class="text-decoration-none" href="tel:+918284822248">+91 8284822248</a>
+      </div>
+      <div class="col-md-4 text-center px-5">
+        <img src="publicAssets/img/icon2.png" alt="">
+        <h4 class="cfont">
+          Email
+        </h4>
+        <p class="text-muted">
+          <small>
+            If you have any query, Drop us a mail for any inquiries or assistance.
+          </small>
+        </p>
+        <a href="mailto:pathiktrips@gmail.com" class="text-decoration-none">
+          pathiktrips@gmail.com
+        </a>
+      </div>
+      <div class="col-md-4 text-center px-5">
+        <img src="publicAssets/img/icon3.png" alt="">
+        <h4 class="cfont">
+          Location
+        </h4>
+        <p class="text-muted">
+          <small>
+            Sector 16 Rohini, New Delhi <br> 110085
+          </small>
+        </p>
+        <a href="" class="text-decoration-none">
+          View On Google Map
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- contact from -->
+<section class="my-5">
+  <div class="container border-top py-5">
+    <div class="row">
+      <div class="col-md-10 m-auto pb-5">
+        <div class="text-center">
+          <h2 class="cfont">
+            Leave us your info
+          </h2>
+          <h5>
+            and we will get back to you.
+          </h5>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-10 m-auto">
+        <div class="row">
+          <div class="col-6 mb-5">
+            <small>
+              Name:
+            </small><br>
+            <input type="text" class="cInput border-bottom w-100 p-2" name="name" id="nameInp">
+          </div>
+          <div class="col-6 mb-5">
+            <small>
+              Mobile:
+            </small><br>
+            <input type="number" class="cInput border-bottom w-100 p-2" name="mobile" id="mobileInp">
+          </div>
+          <div class="col-md-12 mb-5">
+            <small>
+              Email:
+            </small><br>
+            <input type="email" class="cInput border-bottom w-100 p-2" name="email" id="emailInp">
+          </div>
+          <div class="col-md-12 mb-5">
+            <small>
+              Message:
+            </small><br>
+            <textarea name="message" class="cInput border-bottom w-100 p-2" id="messageInp" cols="30" rows="2"></textarea>
+          </div>
+          <div class="text-center">
+            <button class="cssbuttons-io-button w-50" id="sendMessage">
+              <span>Send Message</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- map -->
+<section class="px-md-5 px-2">
+  <div class="rounded-4 overflow-hidden">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448194.82162352453!2d77.09323125!3d28.6440836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1703755264968!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>
+
+
+<%- include('./partials/footer') %>

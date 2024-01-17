@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default" data-assets-path="adminAssets/assets/" data-template="vertical-menu-template-free">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+  <title>
+    Dashboard &#8211; Pathik Your Own Trip
+  </title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="publicAssets/img/path-logo.png" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="adminAssets/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="adminAssets/assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="adminAssets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+  <link rel="stylesheet" href="adminAssets/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    .drop-area.active {
+      border-color: #2563eb;
+    }
+  </style>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+
+  <!-- Page CSS -->
+
+  <!-- Helpers -->
+  <script src="adminAssets/assets/vendor/js/helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="adminAssets/assets/js/config.js"></script>
+
+  <!-- ✅ Load CSS file for DataTables  -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css" integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+  <!-- ✅ load jQuery ✅ -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <!-- ✅ load DataTables ✅ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <link rel="stylesheet" href="adminAssets\assets\css\adminCss.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+  <script>
+    function deleteCookies() {
+      var cookies = document.cookie.split(";");
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+      }
+    }
+  </script>
+  <script>
+    window.addEventListener("pageshow", function(event) {
+      var historyTraversal = event.persisted ||
+        (typeof window.performance != "undefined" &&
+          window.performance.navigation.type === 2);
+      if (historyTraversal) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+  </script>
+
+
+</head>
+
+<body>
+  <!-- Layout wrapper -->
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+      <!-- Menu -->
+
+      <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+        <div class="text-center p-3">
+          <a href="/dashboard">
+            <img src="publicAssets/img/path-logo.png" class="img-fluid m-auto" style="height: 65px" alt="" />
+          </a>
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+
+        <ul class="menu-inner py-1">
+          <!-- Dashboard -->
+          <li class="menu-item">
+            <a href="/dashboard" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-home-circle"></i>
+              <div data-i18n="Analytics">Dashboard</div>
+            </a>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Response Info</span>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-dock-top"></i>
+              <div data-i18n="Account Settings">Form Response</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/popupResponse" class="menu-link">
+                  <div data-i18n="Account">Popup Form</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/contactResponse" class="menu-link">
+                  <div data-i18n="Notifications">Contact Us Form</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Packages Info</span>
+          </li>
+          <!-- Layouts -->
+          <li class="menu-item active">
+            <a href="/addPackage" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-table"></i>
+              <div data-i18n="Tables">Add Package</div>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-layout"></i>
+              <div data-i18n="Layouts">View Packages</div>
+            </a>
+
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <a href="/authCat/Domestic" class="menu-link">
+                  <div data-i18n="Without menu">Domestic</div>
+                </a>
+              </li>
+              <li class="menu-item">
+                <a href="/authCat/International" class="menu-link">
+                  <div data-i18n="Without navbar">International</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Manage Website</span>
+          </li>
+          <li class="menu-item">
+            <a href="/siteSetting" class="menu-link">
+              <i class="menu-icon tf-icons bx bx-cube-alt"></i>
+              <div data-i18n="Tables">Site Setting</div>
+            </a>
+          </li>
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">Admin Setting</span>
+          </li>
+          <li class="menu-item">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons bx bx-lock-open-alt"></i>
+              <div data-i18n="Authentications">Authentications</div>
+            </a>
+            <ul class="menu-sub">
+              <li class="menu-item">
+                <span class="menu-link" style="cursor: pointer">
+                  <div data-i18n="Basic" data-bs-toggle="modal" data-bs-target="#modalCenter">
+                    Change Password
+                  </div>
+                </span>
+              </li>
+              <li class="menu-item">
+                <div class="text-center">
+                  <span class="badge bg-label-danger m-auto py-2 px-5" style="text-transform: capitalize !important;cursor: pointer;">
+                    <form action="/logout" method="post">
+                      <button style="all: unset" id="logoutBtn" onclick="deleteCookies()">Log Out</button>
+                    </form>
+                  </span>
+                </div>
+
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </aside>
+      <!-- / Menu -->
+
+      <!-- Layout container -->
+      <div class="layout-page">
+        <!-- Content wrapper -->
+        <div class="content-wrapper">
+          <!-- Content -->
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="row align-items-center">
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/chart-success.png" alt="chart success" class="rounded" />
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Total Packages</span>
+                        <h3 class="card-title mb-2 fs-3"><%=totalPackages%></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/wallet-info.png" alt="Credit Card" class="rounded" />
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Total Booking</span>
+                        <h3 class="card-title mb-2 fs-3"><%= totalBooking %></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/paypal.png" alt="Credit Card" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt4" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt4">
+                              <a class="dropdown-item" href="/contactResponse">View</a>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="d-block mb-1">Contact Response</span>
+                        <h3 class="card-title text-nowrap fs-3 mb-2"><%=totalContactRes%></h3>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="card-title d-flex align-items-start justify-content-between">
+                          <div class="avatar flex-shrink-0">
+                            <img src="adminAssets/assets/img/icons/unicons/cc-primary.png" alt="Credit Card" class="rounded" />
+                          </div>
+                          <div class="dropdown">
+                            <button class="btn p-0" type="button" id="cardOpt1" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="cardOpt1">
+                              <a class="dropdown-item" href="/popupResponse">View More</a>
+                            </div>
+                          </div>
+                        </div>
+                        <span class="fw-semibold d-block mb-1">Popup Response</span>
+                        <h3 class="card-title mb-2 fs-3"><%=totalPopupRes%></h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- table -->
+
+            <!-- Basic Bootstrap Table -->
+            <div class="card">
+              <form action="addPackages" method="post" enctype="multipart/form-data">
+                <div class="row pt-4 align-items-center">
+                  <div class="col-6">
+                    <h5 class="card-header fs-5">
+                      Add New Packages to Website
+                    </h5>
+                  </div>
+                  <div class="col-6 text-end pe-5">
+                    <button class="btn btn-danger" id="addPackBtn">
+                      Add Packages
+                    </button>
+                  </div>
+                </div>
+                <div class="row px-4 py-5">
+                  <div class="col-4 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput5" placeholder="" name="packageTitle" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput5">Package Title</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <select class="form-select py-3" id="mainPacKCat" aria-label="Default select example" name="packageCategory">
+                      <option class="" value="" selected disabled>
+                        Package Category
+                      </option>
+                      <option value="Domestic"> Domestic </option>
+                      <option value="International"> International </option>
+                    </select>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <select class="form-select py-3" id="subPackCat" aria-label="Default select example" name="packageLocation">
+                      <option class="" value="" selected disabled>
+                        Package Location
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-2 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput04" placeholder="" name="packagePrice" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput04"> Pricing </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput1" placeholder="" name="packageDuration" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput1"> Trip Duration </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput3" name="packageMeal" placeholder="" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput3"> Meal on Trip </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-3 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput1" name="packageDepartureCity" placeholder="" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput1"> Departure City </label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-3 mb-4">
+                    <div class="card-body p-0">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="floatingInput4" placeholder="" name="packageTransportation" aria-describedby="floatingInputHelp" required />
+                        <label for="floatingInput4"> Transportation </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6 mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                      Overview
+                    </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="7" name="packageOverview" required></textarea>
+                  </div>
+                  <div class="col-6 mb-4">
+                    <label for="exampleFormControlTextarea4" class="form-label">
+                      Itinerary
+                    </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea4" rows="7" name="packageItineraryTxt" required>@@Day 1
+## list date 1
+## list date 2
+## list date 3
+## list date 4
+
+@@Day 2
+## list date 1
+## list date 2
+## list date 3
+## list date 4
+
+@@Day 3
+## list date 1
+## list date 2
+## list date 3
+## list date 4</textarea>
+                  </div>
+                  <div class="col-6">
+                    <label for="exampleFormControlTextarea2" class="form-label">
+                      Inclusions
+                    </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="7" name="packageIncludesTxt" required>## Includes1
+## Includes2
+## Includes3</textarea>
+                  </div>
+                  <div class="col-6">
+                    <label for="exampleFormControlTextarea3" class="form-label">
+                      Exclusions
+                    </label>
+                    <textarea class="form-control" id="exampleFormControlTextarea3" rows="7" name="packageExcludesTxt" required>## Excludes1
+## Excludes2
+## Excludes3</textarea>
+                  </div>
+                  <div class="col-12 row my-4">
+                    <div class="col">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput6" placeholder="" aria-describedby="floatingInputHelp" name="budgetPrice" required />
+                        <label for="floatingInput6">&nbsp; Budget Price</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput7" placeholder="" aria-describedby="floatingInputHelp" name="standardPrice" required />
+                        <label for="floatingInput7">&nbsp; Standard Price</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput8" placeholder="" aria-describedby="floatingInputHelp" name="deluxePrice" required />
+                        <label for="floatingInput8">&nbsp; Deluxe Price</label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput9" placeholder="" aria-describedby="floatingInputHelp" name="luxuryPrice" required />
+                        <label for="floatingInput9">&nbsp; Luxury Price </label>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="form-floating">
+                        <input type="number" class="form-control" id="floatingInput10" placeholder="" aria-describedby="floatingInputHelp" name="premiumPrice" required />
+                        <label for="floatingInput10">&nbsp; Premium Price </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <small>
+                      Select Trips Date
+                    </small>
+                    <input type="text" class="form-control form-control-lg" name="datesList" id="calendar" placeholder="Dates">
+                  </div>
+                  <div class="col-6">
+                    <div class="upload-container relative flex items-center justify-between w-full">
+                      <div class="drop-area w-full rounded-md border-2 border-dotted border-gray-200 transition-all hover:border-blue-600/30 text-center">
+                        <label for="file-input" class="block w-full h-full text-gray-500 p-4 text-sm cursor-pointer">
+                          Drop your image here or click to browse
+                        </label>
+                        <input name="packageImg" type="file" id="file-input" accept="image/*" class="hidden" required />
+                        <!-- Image upload input -->
+                        <div class="preview-container hidden items-center justify-center flex-col">
+                          <div class="preview-image w-36 h-36 bg-cover bg-center rounded-md"></div>
+                          <span class="file-name my-4 text-sm font-medium"></span>
+                          <p class="close-button cursor-pointer transition-all mb-4 rounded-md px-3 py-1 border text-xs text-red-500 border-red-500 hover:bg-red-500 hover:text-white">
+                            Delete
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn btn-danger mt-4 w-25 m-auto" id="addPackBtn2">
+                    Add Packages
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <!-- / Content -->
+        </div>
+        <!-- Content wrapper -->
+      </div>
+      <!-- / Layout page -->
+    </div>
+
+    <!-- Overlay -->
+    <div class="layout-overlay layout-menu-toggle"></div>
+  </div>
+  <!-- / Layout wrapper -->
+
+  <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="color: black !important"></button>
+        </div>
+        <div class="text-center">
+          <h5 class="modal-title" id="modalCenterTitle">Change Password</h5>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="currentPassword" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="currentPassword">&nbsp; Current Password</label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="newPassword" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="newPassword">&nbsp; New Password</label>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="form-floating">
+              <input type="text" class="form-control" id="newPassword2" placeholder="" aria-describedby="floatingInputHelp" />
+              <label for="newPassword2">&nbsp; Re-enter Password</label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mb-4">
+          <button type="button" id="changePassBtn" class="btn btn-danger btn-buy-now" style="background-color: #ff3e1d !important">
+            Changes
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Core JS -->
+  <!-- build:js assets/vendor/js/core.js -->
+  <script src="adminAssets/assets/vendor/libs/jquery/jquery.js"></script>
+  <script src="adminAssets/assets/vendor/libs/popper/popper.js"></script>
+  <script src="adminAssets/assets/vendor/js/bootstrap.js"></script>
+  <script src="adminAssets/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+  <script src="adminAssets/assets/vendor/js/menu.js"></script>
+  <!-- endbuild -->
+
+  <!-- Vendors JS -->
+  <script src="adminAssets/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+
+  <!-- Main JS -->
+  <script src="adminAssets/assets/js/main.js"></script>
+
+  <!-- Page JS -->
+  <script src="adminAssets/assets/js/dashboards-analytics.js"></script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.js"></script>
+
+  <script>
+    // Get the necessary elements from the HTML document
+    const dropArea = document.querySelector(".drop-area");
+    const fileInput = document.querySelector("#file-input");
+    const previewContainer = document.querySelector(".preview-container");
+    const previewImage = document.querySelector(".preview-image");
+    const closeButton = document.querySelector(".close-button");
+    const fileName = document.querySelector(".file-name");
+
+    // Add event listener to the drop area to handle when a file is being dragged over it
+    dropArea.addEventListener("dragover", (event) => {
+      event.preventDefault(); // Prevent default behavior of browser
+      dropArea.classList.add("active"); // Add "active" class to the drop area
+    });
+
+    // Add event listener to the drop area to handle when a file is no longer being dragged over it
+    dropArea.addEventListener("dragleave", () => {
+      dropArea.classList.remove("active"); // Remove "active" class from the drop area
+    });
+
+    // Add event listener to the drop area to handle when a file is dropped onto it
+    dropArea.addEventListener("drop", (event) => {
+      event.preventDefault(); // Prevent default behavior of browser
+      const file = event.dataTransfer.files[0]; // Get the file that was dropped
+      showPreview(file); // Show a preview of the file
+      showFileName(file); // Show the name of the file
+    });
+
+    // Add event listener to the file input element to handle when a file is selected
+    fileInput.addEventListener("change", () => {
+      const file = fileInput.files[0]; // Get the file that was selected
+      showPreview(file); // Show a preview of the file
+      showFileName(file); // Show the name of the file
+    });
+
+    // Add event listener to the close button to handle when it is clicked
+    closeButton.addEventListener("click", (event) => {
+      event.preventDefault(); // Prevent default behavior of button
+      fileInput.value = ""; // Clear the file input value
+      previewImage.style.backgroundImage = ""; // Clear the preview image
+      fileName.textContent = ""; // Clear the file name
+      previewImage.classList.add("hidden"); // Hide the preview image
+      previewContainer.classList.add("hidden"); // Hide the preview container
+      previewImage.classList.remove("flex"); // Remove "flex" class from preview image
+    });
+
+    // Function to show a preview of the file
+    function showPreview(file) {
+      if (file.type.startsWith("image/")) {
+        // Check if the file is an image
+        const reader = new FileReader(); // Create a new FileReader object
+        reader.readAsDataURL(file); // Read the file as a data URL
+        reader.onload = () => {
+          // When the file has been read
+          previewImage.style.backgroundImage = `url(${reader.result})`; // Set the background image of the preview container to the data URL
+          previewImage.classList.remove("hidden"); // Show the preview image
+          dropArea.classList.remove("active"); // Remove "active" class from drop area
+          previewContainer.classList.remove("hidden"); // Show the preview container
+          previewContainer.classList.add("flex"); // Add "flex" class to preview container
+        };
+      }
+    }
+
+    // Function to show the name of the file
+    function showFileName(file) {
+      fileName.textContent = file.name; // Set the text content of the file name element to the name of the file
+      fileName.style.display = "block"; // Show the file name element
+    }
+  </script>
+
+  <script>
+    flatpickr('#calendar', {
+      mode: "multiple",
+      dateFormat: "d-m-Y",
+      conjunction: "::",
+      minDate: "today",
+    });
+  </script>
+
+  <!-- Admin JS -->
+  <script src="adminAssets/assets/js/adminScript.js"></script>
+
+</body>
+
+</html>

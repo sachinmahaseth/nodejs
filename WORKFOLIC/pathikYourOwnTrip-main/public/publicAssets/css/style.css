@@ -1,0 +1,540 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=DM+Serif+Display&family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.cfont {
+  font-family: "DM Serif Display", serif !important;
+}
+
+.cfont1 {
+  font-family: "Caveat", cursive;
+  font-weight: bold;
+}
+
+.greenTxt {
+  color: #5ca13e;
+}
+
+input {
+  outline: none;
+  font-size: 14px;
+}
+
+textarea {
+  outline: none;
+  font-size: 14px;
+}
+
+.cssbuttons-io-button {
+  padding: 0.7em 1.6em;
+  color: white;
+  background: linear-gradient(0deg,
+      rgba(20, 167, 62, 1) 0%,
+      rgba(102, 247, 113, 1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-white {
+  padding: 0.7em 1.6em;
+  color: black;
+  background: white;
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #dde4df98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+}
+
+.cssbuttons-io-white:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #acceb598;
+}
+
+.cssbuttons-io-white:active {
+  box-shadow: 0 0.3em 1em -0.5em #acceb598;
+}
+
+#mainHeroBg {
+  /* background: url(https://ld-wp73.template-help.com/wordpress/prod_19731/v4/wp-content/uploads/2018/07/home-slide-bg-1-1.jpg); */
+  background: url(../wall/pexels-s-migaj-949193.jpg);
+  background-size: cover;
+  position: relative;
+  background-position: center center;
+}
+
+#heroText {
+  background: rgba(0, 0, 0, 0.39);
+}
+
+
+#largerNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 94%;
+  margin: auto;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+
+#heroText .centerRow {
+  background: url(https://ld-wp73.template-help.com/wordpress/prod_19731/v4/wp-content/uploads/2018/07/bg-text.png);
+  background-repeat: no-repeat;
+  background-size: 30rem;
+  background-position: center center;
+  background-position-y: 45%;
+}
+
+#heroText .centerRow h1 {
+  font-size: 5.5rem;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  top: 50px;
+}
+
+#largerNav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+#largerNav .activeBtn {
+  color: white;
+}
+
+.heroCounter {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  left: 0;
+  width: 95%;
+  margin: auto;
+}
+
+.categoryBox {
+  color: black;
+}
+
+.categoryBox section {
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.categoryBox img {
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.categoryBox:hover img {
+  transform: scale(1.5);
+}
+
+.lightShadow {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.activeNavbar {
+  background-color: white;
+  width: 100% !important;
+  padding-left: 3% !important;
+  padding-right: 3% !important;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.activeNavbar h4 {
+  color: black !important;
+}
+
+.activeNavbar a {
+  color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.activeNavbar .activeBtn {
+  color: black !important;
+}
+
+.popularCard {
+  position: relative;
+}
+
+.popularCard>div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 25px;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.swiperCarousel1 .swiper-slide>div {
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+#smallMainHero {
+  height: 50vh;
+  background: url(https://hikingtour.travelerwp.com/wp-content/uploads/2019/11/mask.png);
+  background-size: cover;
+  position: relative;
+}
+
+.slider {
+  margin-bottom: 30px;
+  /* background-color: whitesmoke; */
+  /* padding: 8em 2em; */
+}
+
+.slider img {
+  width: 180px;
+  height: auto;
+  animation: scroll 10s linear infinite;
+}
+
+.slide-track {
+  width: 100%;
+  display: flex;
+  gap: 3em;
+  overflow: hidden;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1000%);
+  }
+}
+
+.accordion-button:not(.collapsed) {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.accordion-item button {
+  box-shadow: none !important;
+}
+
+.selectList {
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.cInput {
+  border: none;
+}
+
+.blogCard {
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.blogCard>div>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: end;
+  padding: 15px;
+  color: white;
+  background: transparent;
+  overflow: hidden !important;
+}
+
+.blogCardOverlay {
+  overflow: hidden;
+}
+
+.blogCard:hover .blogCardOverlay {
+  background: rgba(0, 0, 255, 0.1);
+  overflow: hidden;
+}
+
+.blogCard img {
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+.blogCard:hover img {
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+
+.blogCard>div {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mainCateDiv {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.mainCateDiv img {
+  transition: all 0.3s ease;
+}
+
+.mainCateDiv section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(to bottom, transparent, #05073c);
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+}
+
+.mainCateDiv:hover img {
+  transform: scale(1.3);
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  right: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav p {
+  transition: 0.3s;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+#smallNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  margin: auto;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 480px) {
+  #heroText .centerRow {
+    background: url(https://ld-wp73.template-help.com/wordpress/prod_19731/v4/wp-content/uploads/2018/07/bg-text.png);
+    background-repeat: no-repeat;
+    background-size: 10rem;
+    background-position: center center;
+    background-position-y: 25%;
+  }
+
+  #heroText .centerRow h1 {
+    font-size: 3rem !important;
+    top: -100px;
+  }
+
+  #popupmodal img {
+    width: 200px !important;
+    margin: auto;
+  }
+
+  .categoryBox {
+    margin-bottom: 30px !important;
+  }
+
+  .categoryBox h5 {
+    font-size: 1.1rem !important;
+  }
+
+  .popularCard h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .midBanner>div {
+    background-size: cover !important;
+    background-position: center right !important;
+    color: white;
+  }
+
+  .midBanner h3 {
+    font-size: 1.2rem !important;
+    color: white;
+  }
+
+  .midBanner .row {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .midBanner .col-11 {
+    margin: auto !important;
+    padding: 50px 20px;
+  }
+
+  .footerIcon {
+    justify-content: center !important;
+  }
+
+  .whiteHeadPhone {
+    display: block !important;
+  }
+
+  .whiteHeadPhone img {
+    width: 30px !important;
+  }
+
+  #smallMainHero {
+    height: 30vh;
+    background-position: center center !important;
+  }
+
+  #smallMainHero .container .h-100 {
+    background-color: rgba(0, 0, 0, 0.322);
+  }
+
+  #smallMainHero h1 {
+    font-size: 1.3rem !important;
+  }
+
+  #smallMainHero h6 {
+    font-size: 0.9rem !important;
+  }
+
+  .splide__slide>div {
+    display: block !important;
+  }
+
+  .splide__slide small {
+    font-size: 0.7rem !important;
+  }
+
+  .singleCategoryPack {
+    font-size: 0.8rem !important;
+    margin-bottom: 20px;
+  }
+}
+
+.connect {
+  position: fixed;
+  bottom: 120px;
+  right: 25px;
+}
+
+.hover-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.hover-text {
+  border: 1px solid black;
+  border-radius: 10px;
+  display: none;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  width: 280px;
+  height: 180px;
+  background-color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  /* overflow: auto; */
+}
+
+.hover-icon-container:hover .hover-text {
+  display: block;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.whatsapp-icon:hover {
+  background-color: #12b85a;
+}
