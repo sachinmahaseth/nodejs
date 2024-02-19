@@ -49,6 +49,7 @@ a {
     content: "";
     position: absolute;
     background-color: #f9bf29;
+    background-color: blue;
     height: 3px;
     width: 0;
     left: 0;

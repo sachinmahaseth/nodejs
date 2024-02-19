@@ -1,4 +1,4 @@
-const express = require('express');
+    const express = require('express');
 
 const router = express.Router();
 const multer = require('multer');
@@ -124,12 +124,15 @@ router.post('/signup', (req, res) => {
 
 // DASHBOARD
 router.get('/dashboard', (req, res) => {
-    if (req.session.user && req.cookies.user_sid) {
-        res.render("dashboard/index");
-    } else {
-        res.redirect('/login')
-    }
+    // if (req.session.user && req.cookies.user_sid) {
+    //     res.render("dashboard/index");
+    // } else {
+    //     res.redirect('/login')
+    // }
+    res.render('dashboard')
 })
+
+
 
 // router.get('/dashboard' , function(req,res) {
 //     if(req.session.user && req.cookies.user_id) {

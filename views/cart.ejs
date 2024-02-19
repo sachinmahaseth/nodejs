@@ -34,22 +34,27 @@
     <section>
         <div class="container">
             <div class="row">
-                
-                <% if(addData.length>0){ %>
-                        <%for(var i=0; i<addData.length;i++) {%>
-                            <div class="col-md-3">
-                                <img class="img-fluid product-thumbnail w-100 h-75" src="http://localhost:3000/upload/<%= addData[i].productimage %>">
-                                <h6 class="text-center"><%= addData[i].productname %></h6>
-                                <strong class="m-auto d-block text-center"> $ <%= addData[i].productprice %> </strong>   
-                                <a class="text-center d-block"  href="/packagedetail/<%=addData[i]._id %>"><button class="btn btn-primary w-50 fs-6   p-2 mt-3"> <i class="fa-solid fa-bolt-lightning fa-lg"
-                                    style="color: #ffffff;"></i> <strong> BUY NOW </strong> </button></a>
 
-                            </div>
-                            <% } %>
+                <% if(addData.length>0){ %>
+                    <%for(var i=0; i<addData.length;i++) {%>
+                        <div class="col-md-3">
+                            <img class="img-fluid product-thumbnail w-100 h-75"
+                                src="http://localhost:3000/upload/<%= addData[i].productimage %>">
+                            <h6 class="text-center">
+                                <%= addData[i].productname %>
+                            </h6>
+                            <strong class="m-auto d-block text-center"> $ <%= addData[i].productprice %> </strong>
+                            <a class="text-center d-block" href="/packagedetail/<%=addData[i]._id %>"><button
+                                    class="btn btn-primary w-50 fs-6   p-2 mt-3"> <i
+                                        class="fa-solid fa-bolt-lightning fa-lg" style="color: #ffffff;"></i> <strong>
+                                        BUY NOW </strong> </button></a>
+
+                        </div>
+                        <% } %>
                             <% } else {%>
                                 result not found
                                 <% } %>
-                    <!-- <table class="table">
+                                    <!-- <table class="table">
                         <thead>
                             <tr class="product_detail text-center">
 
@@ -148,7 +153,7 @@
 
                         </tbody>
                     </table> -->
-        
+
             </div>
         </div>
     </section>

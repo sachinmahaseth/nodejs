@@ -1,23 +1,3 @@
-// const express = require('express');
-// const app = express();
-
-// const router = express.Router();
-// app.set('view engine', 'ejs');
-
-
-// router.get('', (req , res)=> {
-//     res.render('index');
-// })
-
-
-
-
-// router.get(3000, (req,res) => {
-//     res.sendFile(__dirname+"/index.ejs")
-// }) 
-
-
-
 const express = require('express');
 // const router = require('router');
 
@@ -90,7 +70,7 @@ app.use(require("./router/controller"));
 
 
 // app.use('/',router)
-app.listen(5000, ()=>{
+app.listen(3000, ()=>{
     console.log("listing to 3000 port")
 });
 

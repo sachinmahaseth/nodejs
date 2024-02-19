@@ -30,10 +30,10 @@ signupSchema.pre('save', function(next){
     }
     this.password = bcrypt.hashSync(this.createpass, 10);
     next();
-});
+});                                 
 signupSchema.methods.comparePassword = function(plaintext , callback){
     return callback(null , bcrypt.compareSync(plaintext, this.createpass));
-};
+};                                                  
 
 
 const signupUser =new mongoose.model('signup', signupSchema);
